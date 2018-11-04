@@ -11,9 +11,9 @@ diff -ur mozilla.orig/browser/app/profile/firefox.js mozilla/browser/app/profile
  pref("extensions.startupScanScopes", 0);
  
 @@ -150,7 +150,7 @@
- // If set to true, the Update Service will automatically download updates when
- // app updates are enabled per the app.update.enabled preference and if the user
- // can apply updates.
+ 
+ // If set to true, the Update Service will automatically download updates if the
+ // user can apply updates.
 -pref("app.update.auto", true);
 +pref("app.update.auto", false);
  
