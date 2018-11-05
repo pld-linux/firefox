@@ -305,6 +305,7 @@ BuildRequires:	readline-devel
 BuildRequires:	rpm >= 4.4.9-56
 BuildRequires:	rpmbuild(macros) >= 1.601
 BuildRequires:	rust >= 1.28.0
+BuildRequires:	rust-cbindgen >= 0.6.2
 BuildRequires:	sed >= 4.0
 BuildRequires:	sqlite3-devel >= 3.24.0
 BuildRequires:	startup-notification-devel >= 0.8
