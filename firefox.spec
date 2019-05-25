@@ -2015,6 +2015,7 @@ Zuluskie pliki językowe dla Firefoksa.
 
 %package geckodriver
 Summary:	WebDriver for Firefox
+Summary(pl.UTF-8):	WebDriver dla Firefoksa
 Group:		Applications
 Requires:	firefox >= %{version}
 
@@ -2022,6 +2023,12 @@ Requires:	firefox >= %{version}
 WebDriver is an open source tool for automated testing of webapps
 across many browsers. It provides capabilities for navigating to web
 pages, user input, JavaScript execution, and more.
+
+%description geckodriver -l pl.UTF-8
+WebDriver to mające otwarte źródła narzędzia do automatycznego
+testowania aplikacji WWW w różnych przeglądarkach. Jego możliwości to
+m.in. nawigowanie po stronach WWW, wejście od użytkownika, wykonywanie
+JavaScriptu.
 
 %prep
 unpack() {
