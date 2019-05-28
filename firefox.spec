@@ -296,7 +296,7 @@ BuildRequires:	libpng(APNG)-devel >= 0.10
 BuildRequires:	libpng-devel >= 2:1.6.35
 BuildRequires:	libstdc++-devel >= 6:4.4
 BuildRequires:	libxcb-devel
-BuildRequires:	libvpx-devel >= 1.5.0
+BuildRequires:	libvpx-devel >= 1.7.0
 %{?with_lto:BuildRequires:	lld}
 BuildRequires:	llvm-devel >= 3.9.0
 # or --disable-nodejs ?
@@ -350,7 +350,7 @@ Requires:	hicolor-icon-theme
 Requires:	libjpeg-turbo
 Requires:	libpng >= 2:1.6.35
 Requires:	libpng(APNG) >= 0.10
-Requires:	libvpx >= 1.5.0
+Requires:	libvpx >= 1.7.0
 Requires:	myspell-common
 Requires:	nspr >= 1:%{nspr_ver}
 Requires:	nss >= 1:%{nss_ver}
