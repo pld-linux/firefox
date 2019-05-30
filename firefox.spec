@@ -2204,10 +2204,10 @@ D=$(( RANDOM % (200 - 100 + 1 ) + 5 ))
 XVFB_PID=$!
 [ -n "$XVFB_PID" ] || exit 1
 export DISPLAY=:${D}
-MOZ_PGO=1 AUTOCONF=/usr/bin/autoconf2_13 ./mach build -v
+MOZ_PGO=1 AUTOCONF=/usr/bin/autoconf2_13 ./mach build -v | cat
 kill $XVFB_PID
 %else
-AUTOCONF=/usr/bin/autoconf2_13 ./mach build -v
+AUTOCONF=/usr/bin/autoconf2_13 ./mach build -v | cat
 %endif
 
 %install
