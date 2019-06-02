@@ -14,6 +14,7 @@
 %bcond_with	shared_js	# shared libmozjs library [broken]
 %bcond_without	system_icu	# build without system ICU
 %bcond_with	system_cairo	# build with system cairo (not supported in 60.0)
+%bcond_with	system_libvpx	# build with system libvpx (67.0 does not build with libvpx 1.8)
 %bcond_with	clang		# build using Clang/LLVM
 %bcond_with	legacy_exts	# build with legacy extensions support
 
@@ -296,7 +297,7 @@ BuildRequires:	libpng(APNG)-devel >= 0.10
 BuildRequires:	libpng-devel >= 2:1.6.35
 BuildRequires:	libstdc++-devel >= 6:4.4
 BuildRequires:	libxcb-devel
-BuildRequires:	libvpx-devel >= 1.7.0
+%{?with_system_libvpx:BuildRequires:	libvpx-devel >= 1.7.0}
 %{?with_lto:BuildRequires:	lld}
 BuildRequires:	llvm-devel >= 3.9.0
 # or --disable-nodejs ?
@@ -350,7 +351,7 @@ Requires:	hicolor-icon-theme
 Requires:	libjpeg-turbo
 Requires:	libpng >= 2:1.6.35
 Requires:	libpng(APNG) >= 0.10
-Requires:	libvpx >= 1.7.0
+%{?with_system_libvpx:Requires:	libvpx >= 1.7.0}
 Requires:	myspell-common
 Requires:	nspr >= 1:%{nspr_ver}
 Requires:	nss >= 1:%{nss_ver}
@@ -2185,7 +2186,7 @@ ac_add_options --with-system-bz2
 ac_add_options --with%{!?with_system_icu:out}-system-icu
 ac_add_options --with-system-jpeg
 ac_add_options --with-system-libevent
-ac_add_options --with-system-libvpx
+ac_add_options --with%{!?with_system_libvpx:out}-system-libvpx
 ac_add_options --with-system-nspr
 ac_add_options --with-system-nss
 ac_add_options --with-system-pixman
@@ -2204,10 +2205,10 @@ D=$(( RANDOM % (200 - 100 + 1 ) + 5 ))
 XVFB_PID=$!
 [ -n "$XVFB_PID" ] || exit 1
 export DISPLAY=:${D}
-MOZ_PGO=1 AUTOCONF=/usr/bin/autoconf2_13 ./mach build -v | cat
+MOZ_PGO=1 AUTOCONF=/usr/bin/autoconf2_13 ./mach build -v
 kill $XVFB_PID
 %else
-AUTOCONF=/usr/bin/autoconf2_13 ./mach build -v | cat
+AUTOCONF=/usr/bin/autoconf2_13 ./mach build -v
 %endif
 
 %install
