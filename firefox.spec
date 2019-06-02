@@ -2168,11 +2168,9 @@ ac_add_options --enable-default-toolkit=cairo-gtk3
 ac_add_options --enable-extensions=default
 %{?with_geckodriver:ac_add_options --enable-geckodriver}
 %{?with_gold:ac_add_options --enable-linker=gold}
-%if %{with lto}
 ac_add_options --disable-elf-hack
+%if %{with lto}
 ac_add_options --enable-lto
-%else
-ac_add_options --enable-elf-hack
 %endif
 ac_add_options --enable-readline
 %{?with_shared_js:ac_add_options --enable-shared-js}
@@ -2199,16 +2197,18 @@ ac_add_options "MOZ_ALLOW_LEGACY_EXTENSIONS=1"
 %endif
 EOF
 
+export MOZ_MAKE_FLAGS="-j1"
+export MOZ_SERVICES_SYNC="1"
 %if %{with pgo}
 D=$(( RANDOM % (200 - 100 + 1 ) + 5 ))
 /usr/bin/Xvfb :${D} &
 XVFB_PID=$!
 [ -n "$XVFB_PID" ] || exit 1
 export DISPLAY=:${D}
-MOZ_PGO=1 AUTOCONF=/usr/bin/autoconf2_13 ./mach build -v
+MOZ_PGO=1 AUTOCONF=/usr/bin/autoconf2_13 ./mach build
 kill $XVFB_PID
 %else
-AUTOCONF=/usr/bin/autoconf2_13 ./mach build -v
+AUTOCONF=/usr/bin/autoconf2_13 ./mach build
 %endif
 
 %install
@@ -2338,11 +2338,8 @@ fi
 %{_libdir}/%{name}/browser/chrome.manifest
 %{_libdir}/%{name}/browser/omni.ja
 
-%{_libdir}/%{name}/browser/features/activity-stream@mozilla.org.xpi
-%{_libdir}/%{name}/browser/features/aushelper@mozilla.org.xpi
-%{_libdir}/%{name}/browser/features/firefox@getpocket.com.xpi
 %{_libdir}/%{name}/browser/features/formautofill@mozilla.org.xpi
-%{_libdir}/%{name}/browser/features/onboarding@mozilla.org.xpi
+%{_libdir}/%{name}/browser/features/fxmonitor@mozilla.org.xpi
 %{_libdir}/%{name}/browser/features/screenshots@mozilla.org.xpi
 %{_libdir}/%{name}/browser/features/webcompat@mozilla.org.xpi
 %{_libdir}/%{name}/browser/features/webcompat-reporter@mozilla.org.xpi
@@ -2366,6 +2363,7 @@ fi
 %attr(755,root,root) %{_libdir}/%{name}/libmozavcodec.so
 %attr(755,root,root) %{_libdir}/%{name}/libmozavutil.so
 %attr(755,root,root) %{_libdir}/%{name}/libmozsandbox.so
+%attr(755,root,root) %{_libdir}/%{name}/libmozwayland.so
 %{_libdir}/%{name}/dependentlibs.list
 %{_libdir}/%{name}/omni.ja
 %dir %{_libdir}/%{name}/gtk2
