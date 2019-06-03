@@ -22,6 +22,10 @@
 %define		with_clang	1
 %undefine	with_gold
 %endif
+
+# 67.0 libxul.so: debugedit: canonicalization unexpectedly shrank by one character
+%define		_enable_debug_packages	0
+
 # On updating version, grab CVE links from:
 # https://www.mozilla.org/security/known-vulnerabilities/firefox.html
 # Release Notes:
