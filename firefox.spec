@@ -293,7 +293,7 @@ BuildRequires:	libatomic-devel
 BuildRequires:	libevent-devel >= 1.4.7
 # standalone libffi 3.0.9 or gcc's from 4.5(?)+
 BuildRequires:	libffi-devel >= 6:3.0.9
-%{?with_system_icu:BuildRequires:	libicu-devel >= 59.1}
+%{?with_system_icu:BuildRequires:	libicu-devel >= 63.1}
 # requires libjpeg-turbo implementing at least libjpeg 6b API
 BuildRequires:	libjpeg-devel >= 6b
 BuildRequires:	libjpeg-turbo-devel
