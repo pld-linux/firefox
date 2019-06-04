@@ -15,7 +15,7 @@
 %bcond_without	system_icu	# build without system ICU
 %bcond_with	system_cairo	# build with system cairo (not supported in 60.0)
 %bcond_with	system_libvpx	# build with system libvpx (67.0 does not build with libvpx 1.8)
-%bcond_with	clang		# build using Clang/LLVM
+%bcond_without	clang		# build using Clang/LLVM
 %bcond_with	legacy_exts	# build with legacy extensions support
 
 %if %{with lto}
@@ -2129,6 +2129,10 @@ cat << 'EOF' > .mozconfig
 %if %{with clang}
 export CC="clang"
 export CXX="clang++"
+export LLVM_PROFDATA="llvm-profdata"
+export AR="llvm-ar"
+export NM="llvm-nm"
+export RANLIB="llvm-ranlib"
 %else
 export CC="%{__cc}"
 export CXX="%{__cxx}"
@@ -2176,6 +2180,7 @@ ac_add_options --disable-elf-hack
 %if %{with lto}
 ac_add_options --enable-lto
 %endif
+%{?with_clang:ac_add_options --enable-linker=lld}
 ac_add_options --enable-readline
 %{?with_shared_js:ac_add_options --enable-shared-js}
 ac_add_options --enable-startup-notification
