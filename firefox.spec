@@ -2201,6 +2201,11 @@ ac_add_options "MOZ_ALLOW_LEGACY_EXTENSIONS=1"
 %endif
 EOF
 
+%ifarch %{ix86}
+export MOZ_LINK_FLAGS="-Wl,--no-keep-memory -Wl,--reduce-memory-overheads"
+export RUSTFLAGS="-Cdebuginfo=0"
+%endif
+
 export MOZ_MAKE_FLAGS="-j1"
 export MOZ_SERVICES_SYNC="1"
 %if %{with pgo}
