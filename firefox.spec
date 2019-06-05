@@ -23,9 +23,6 @@
 %undefine	with_gold
 %endif
 
-# 67.0 libxul.so: debugedit: canonicalization unexpectedly shrank by one character
-%define		_enable_debug_packages	0
-
 # On updating version, grab CVE links from:
 # https://www.mozilla.org/security/known-vulnerabilities/firefox.html
 # Release Notes:
@@ -392,6 +389,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 # and as we don't provide them, don't require either
 %define		_noautoreq	liblgpllibs.so libmozavcodec.so libmozavutil.so libmozgtk.so libmozjs.so libmozsandbox.so libxul.so
+
+# 67.0 libxul.so: debugedit: canonicalization unexpectedly shrank by one character
+%define		_enable_debug_packages	0
 
 %description
 Firefox is an open-source web browser, designed for standards
@@ -2137,8 +2137,18 @@ export RANLIB="llvm-ranlib"
 export CC="%{__cc}"
 export CXX="%{__cxx}"
 %endif
+%ifarch %{ix86}
+export CFLAGS="%{rpmcflags} -D_FILE_OFFSET_BITS=64 -g0"
+export CXXFLAGS="%{rpmcxxflags} -D_FILE_OFFSET_BITS=64 -g0"
+export MOZ_DEBUG_FLAGS=" "
+export LLVM_USE_SPLIT_DWARF=1
+export LLVM_PARALLEL_LINK_JOBS=1
+export MOZ_LINK_FLAGS="-Wl,--no-keep-memory -Wl,--reduce-memory-overheads"
+export RUSTFLAGS="-Cdebuginfo=0"
+%else
 export CFLAGS="%{rpmcflags} -D_FILE_OFFSET_BITS=64"
 export CXXFLAGS="%{rpmcxxflags} -D_FILE_OFFSET_BITS=64"
+%endif
 
 mk_add_options MOZ_OBJDIR=@TOPSRCDIR@/obj-%{_target_cpu}
 
@@ -2205,11 +2215,6 @@ ac_add_options BINDGEN_CFLAGS="$(pkg-config nspr pixman-1 --cflags)"
 ac_add_options "MOZ_ALLOW_LEGACY_EXTENSIONS=1"
 %endif
 EOF
-
-%ifarch %{ix86}
-export MOZ_LINK_FLAGS="-Wl,--no-keep-memory -Wl,--reduce-memory-overheads"
-export RUSTFLAGS="-Cdebuginfo=0"
-%endif
 
 #export MOZ_MAKE_FLAGS="-j1"
 export MOZ_SERVICES_SYNC="1"
