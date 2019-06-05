@@ -2211,7 +2211,7 @@ export MOZ_LINK_FLAGS="-Wl,--no-keep-memory -Wl,--reduce-memory-overheads"
 export RUSTFLAGS="-Cdebuginfo=0"
 %endif
 
-export MOZ_MAKE_FLAGS="-j1"
+#export MOZ_MAKE_FLAGS="-j1"
 export MOZ_SERVICES_SYNC="1"
 %if %{with pgo}
 D=$(( RANDOM % (200 - 100 + 1 ) + 5 ))
