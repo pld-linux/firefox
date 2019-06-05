@@ -47,7 +47,7 @@ Summary(hu.UTF-8):	Firefox web böngésző
 Summary(pl.UTF-8):	Firefox - przeglądarka WWW
 Name:		firefox
 Version:	67.0.1
-Release:	0.1
+Release:	1
 License:	MPL v2.0
 Group:		X11/Applications/Networking
 Source0:	http://releases.mozilla.org/pub/firefox/releases/%{version}/source/firefox-%{version}.source.tar.xz
@@ -2216,7 +2216,7 @@ ac_add_options "MOZ_ALLOW_LEGACY_EXTENSIONS=1"
 %endif
 EOF
 
-#export MOZ_MAKE_FLAGS="-j1"
+%{!?with_clang:export MOZ_MAKE_FLAGS="-j1"}
 export MOZ_SERVICES_SYNC="1"
 %if %{with pgo}
 D=$(( RANDOM % (200 - 100 + 1 ) + 5 ))
