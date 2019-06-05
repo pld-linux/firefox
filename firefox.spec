@@ -302,7 +302,7 @@ BuildRequires:	libpng-devel >= 2:1.6.35
 BuildRequires:	libstdc++-devel >= 6:4.4
 BuildRequires:	libxcb-devel
 %{?with_system_libvpx:BuildRequires:	libvpx-devel >= 1.7.0}
-%{?with_lto:BuildRequires:	lld}
+%{?with_clang:BuildRequires:	lld}
 BuildRequires:	llvm-devel >= 3.9.0
 # or --disable-nodejs ?
 BuildRequires:	nodejs >= 8.11
