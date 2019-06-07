@@ -388,7 +388,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define		_noautoprovfiles	%{_libdir}/%{name}
 
 # and as we don't provide them, don't require either
-%define		_noautoreq	liblgpllibs.so libmozavcodec.so libmozavutil.so libmozgtk.so libmozjs.so libmozsandbox.so libxul.so
+%define		_noautoreq	liblgpllibs.so libmozavcodec.so libmozavutil.so libmozgtk.so libmozjs.so libmozsandbox.so libmozwayland.so libxul.so
 
 # 67.0 libxul.so: debugedit: canonicalization unexpectedly shrank by one character
 %define		_enable_debug_packages	0
