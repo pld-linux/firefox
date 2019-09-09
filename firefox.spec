@@ -287,6 +287,7 @@ BuildRequires:	libpng-devel >= 2:1.6.35
 BuildRequires:	libstdc++-devel >= 6:4.4
 BuildRequires:	libxcb-devel
 %{?with_system_libvpx:BuildRequires:	libvpx-devel >= 1.7.0}
+BuildRequires:	libwebp-devel >= 1.0.2
 %{?with_clang:BuildRequires:	lld}
 BuildRequires:	llvm-devel >= 3.9.0
 # or --disable-nodejs ?
@@ -2121,6 +2122,7 @@ ac_add_options --with-system-nspr
 ac_add_options --with-system-nss
 ac_add_options --with-system-pixman
 ac_add_options --with-system-png
+ac_add_options --with-system-webp
 ac_add_options --with-system-zlib
 # Workaround for mozbz#1341234
 ac_add_options BINDGEN_CFLAGS="$(pkg-config nspr pixman-1 --cflags)"
