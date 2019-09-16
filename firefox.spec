@@ -47,7 +47,7 @@ Summary(hu.UTF-8):	Firefox web böngésző
 Summary(pl.UTF-8):	Firefox - przeglądarka WWW
 Name:		firefox
 Version:	69.0
-Release:	1
+Release:	2
 License:	MPL v2.0
 Group:		X11/Applications/Networking
 Source0:	http://releases.mozilla.org/pub/firefox/releases/%{version}/source/firefox-%{version}.source.tar.xz
@@ -2195,23 +2195,6 @@ cp -a %{SOURCE6} $RPM_BUILD_ROOT%{_datadir}/%{name}/browser/defaults/preferences
 cp -a %{SOURCE5} $RPM_BUILD_ROOT%{_datadir}/%{name}/browser/defaults/preferences/vendor.js
 %endif
 
-cat << 'EOF' > $RPM_BUILD_ROOT%{_sbindir}/%{name}-chrome+xpcom-generate
-#!/bin/sh
-umask 022
-rm -f %{_libdir}/%{name}/browser/components/{compreg,xpti}.dat
-
-# it attempts to touch files in $HOME/.mozilla
-# beware if you run this with sudo!!!
-export HOME=$(mktemp -d)
-# also TMPDIR could be pointing to sudo user's homedir
-unset TMPDIR TMP || :
-
-%{_libdir}/%{name}/firefox -register
-
-rm -rf $HOME
-EOF
-chmod 755 $RPM_BUILD_ROOT%{_sbindir}/%{name}-chrome+xpcom-generate
-
 # GeckoMediaPlugin API headers
 install -d $RPM_BUILD_ROOT%{_includedir}
 cp -pr dom/media/gmp/gmp-api $RPM_BUILD_ROOT%{_includedir}
@@ -2225,7 +2208,6 @@ done
 rm -rf $RPM_BUILD_ROOT
 
 %post
-%{_sbindir}/%{name}-chrome+xpcom-generate
 %update_browser_plugins
 %update_icon_cache hicolor
 %update_desktop_database
@@ -2239,7 +2221,6 @@ fi
 %files
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/%{name}
-%attr(755,root,root) %{_sbindir}/%{name}-chrome+xpcom-generate
 
 %{_desktopdir}/firefox.desktop
 %{_iconsdir}/hicolor/*/apps/firefox.png
