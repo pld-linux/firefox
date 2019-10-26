@@ -1,10 +1,11 @@
---- firefox-49.0.1/toolkit/components/telemetry/healthreport-prefs.js~	2016-06-01 06:11:41.000000000 +0200
-+++ firefox-49.0.1/toolkit/components/telemetry/healthreport-prefs.js	2016-10-02 09:39:52.367936470 +0200
-@@ -4,5 +4,5 @@
+--- firefox-70.0/modules/libpref/init/all.js~	2019-10-26 19:00:48.000000000 +0200
++++ firefox-70.0/modules/libpref/init/all.js	2019-10-26 19:04:38.462322031 +0200
+@@ -5399,7 +5399,7 @@
+     pref("datareporting.healthreport.infoURL", "https://www.mozilla.org/legal/privacy/firefox.html#health-report");
  
- pref("datareporting.healthreport.infoURL", "https://www.mozilla.org/legal/privacy/firefox.html#health-report");
+     // Health Report is enabled by default on all channels.
+-    pref("datareporting.healthreport.uploadEnabled", true);
++    pref("datareporting.healthreport.uploadEnabled", false);
+   #endif
+ #endif
  
--// Health Report is enabled by default on all channels.
--pref("datareporting.healthreport.uploadEnabled", true);
-+// Health Report is disabled by default on all channels.
-+pref("datareporting.healthreport.uploadEnabled", false);
