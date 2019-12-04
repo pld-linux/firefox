@@ -39,8 +39,8 @@ curl -s $U | sed -ne 's,.*href="\([^"]\+\)/".*,'"$U"'xpi/\1.xpi,p'
 # The actual sqlite version (see RHBZ#480989):
 %define		sqlite_build_version %(pkg-config --silence-errors --modversion sqlite3 2>/dev/null || echo ERROR)
 
-%define		nspr_ver	4.21
-%define		nss_ver		3.45
+%define		nspr_ver	4.23
+%define		nss_ver		3.47.1
 
 Summary:	Firefox web browser
 Summary(hu.UTF-8):	Firefox web böngésző
@@ -310,7 +310,7 @@ BuildRequires:	rpmbuild(macros) >= 1.601
 BuildRequires:	rust >= 1.32.0
 BuildRequires:	rust-cbindgen >= 0.9.0
 BuildRequires:	sed >= 4.0
-BuildRequires:	sqlite3-devel >= 3.28.0
+BuildRequires:	sqlite3-devel >= 3.29.0
 BuildRequires:	startup-notification-devel >= 0.8
 BuildRequires:	xorg-lib-libX11-devel
 BuildRequires:	xorg-lib-libXScrnSaver-devel
