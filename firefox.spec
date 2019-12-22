@@ -16,7 +16,6 @@
 %bcond_with	system_cairo	# build with system cairo (not supported in 60.0)
 %bcond_with	system_libvpx	# build with system libvpx (67.0 does not build with libvpx 1.8)
 %bcond_without	clang		# build using Clang/LLVM
-%bcond_with	legacy_exts	# build with legacy extensions support
 
 %if %{with lto}
 %define		with_clang	1
@@ -2126,9 +2125,6 @@ ac_add_options --with-system-webp
 ac_add_options --with-system-zlib
 # Workaround for mozbz#1341234
 ac_add_options BINDGEN_CFLAGS="$(pkg-config nspr pixman-1 --cflags)"
-%if %{with legacy_exts}
-ac_add_options "MOZ_ALLOW_LEGACY_EXTENSIONS=1"
-%endif
 EOF
 
 %{!?with_clang:export MOZ_MAKE_FLAGS="-j1"}
