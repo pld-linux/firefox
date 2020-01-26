@@ -2127,6 +2127,7 @@ ac_add_options --with-system-zlib
 ac_add_options BINDGEN_CFLAGS="$(pkg-config nspr pixman-1 --cflags)"
 EOF
 
+%if ! %{with clang}
 # On x86_64 architectures, Mozilla can build up to 4 jobs at once in parallel,
 # however builds tend to fail on other arches when building in parallel.
 RPM_BUILD_NR_THREADS=$(echo %{_smp_mflags} | cut -dj -f2)
@@ -2136,6 +2137,7 @@ RPM_BUILD_NR_THREADS=$(echo %{_smp_mflags} | cut -dj -f2)
 RPM_BUILD_NR_THREADS=1
 %endif
 export MOZ_MAKE_FLAGS="-j${RPM_BUILD_NR_THREADS}"
+%endif
 
 export MOZ_SERVICES_SYNC="1"
 %if %{with pgo}
