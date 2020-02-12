@@ -10,3 +10,12 @@
  
      @property
      def bin_path(self):
+@@ -294,7 +293,7 @@
+         into the wrong place. This is how virtualenv's work.
+         """
+         packages = self.packages()
+-        python_lib = distutils.sysconfig.get_python_lib()
++        python_lib = distutils.sysconfig.get_python_lib(1)
+ 
+         def handle_package(package):
+             if package[0] == 'setup.py':
