@@ -2046,8 +2046,8 @@ export CC="%{__cc}"
 export CXX="%{__cxx}"
 %endif
 %ifarch %{ix86}
-export CFLAGS="%{rpmcflags} -D_FILE_OFFSET_BITS=64 -g0"
-export CXXFLAGS="%{rpmcxxflags} -D_FILE_OFFSET_BITS=64 -g0"
+export CFLAGS="%{rpmcflags} -mmmx -D_FILE_OFFSET_BITS=64 -g0"
+export CXXFLAGS="%{rpmcxxflags} -mmmx -D_FILE_OFFSET_BITS=64 -g0"
 export MOZ_DEBUG_FLAGS=" "
 export LLVM_USE_SPLIT_DWARF=1
 export LLVM_PARALLEL_LINK_JOBS=1
