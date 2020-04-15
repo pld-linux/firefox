@@ -14,7 +14,7 @@
 %bcond_with	shared_js	# shared libmozjs library [broken]
 %bcond_without	system_icu	# build without system ICU
 %bcond_with	system_cairo	# build with system cairo (not supported in 60.0)
-%bcond_with	system_libvpx	# build with system libvpx (67.0 does not build with libvpx 1.8)
+%bcond_without	system_libvpx	# build with system libvpx
 %bcond_without	clang		# build using Clang/LLVM
 
 %if %{with lto}
@@ -2046,7 +2046,7 @@ export CC="%{__cc}"
 export CXX="%{__cxx}"
 %endif
 %ifarch %{ix86}
-export CFLAGS="%{rpmcflags} -mmmx -D_FILE_OFFSET_BITS=64 -g0"
+export CFLAGS="%{rpmcflags} %{!?with_system_libvpx:-mmmx} -D_FILE_OFFSET_BITS=64 -g0"
 export CXXFLAGS="%{rpmcxxflags} -mmmx -D_FILE_OFFSET_BITS=64 -g0"
 export MOZ_DEBUG_FLAGS=" "
 export LLVM_USE_SPLIT_DWARF=1
