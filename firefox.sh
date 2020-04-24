@@ -26,7 +26,7 @@ PWD=${PWD:-$(pwd)}
 
 if [ -z "$1" ]; then
 	exec $FIREFOX
-else
+elif [ $# -eq 1 -a "$1" = "${1#-}" ]; then
 	if [ -f "$PWD/$1" ]; then
 		URL="file://$PWD/$1"
 	else
@@ -37,4 +37,6 @@ else
 	else
 		exec $FIREFOX -new-window "$URL"
 	fi
+else
+	exec $FIREFOX "$@"
 fi
