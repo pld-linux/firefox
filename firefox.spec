@@ -2095,7 +2095,9 @@ ac_add_options --enable-default-toolkit=cairo-gtk3
 ac_add_options --enable-extensions=default
 %{?with_geckodriver:ac_add_options --enable-geckodriver}
 %{?with_gold:ac_add_options --enable-linker=gold}
+%ifarch %{ix86} %{x8664} %{arm}
 ac_add_options --disable-elf-hack
+%endif
 %if %{with lto}
 ac_add_options --enable-lto
 %endif
