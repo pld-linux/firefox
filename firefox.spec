@@ -300,6 +300,7 @@ BuildRequires:	python-modules >= 1:2.5
 %{?with_pgo:BuildRequires:	python-modules-sqlite}
 BuildRequires:	python-simplejson
 BuildRequires:	python-virtualenv >= 15
+BuildRequires:	python3-virtualenv >= 16
 BuildRequires:	readline-devel
 BuildRequires:	rpm >= 4.4.9-56
 BuildRequires:	rpmbuild(macros) >= 1.601
