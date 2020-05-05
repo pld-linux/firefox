@@ -2127,12 +2127,14 @@ EOF
 %if ! %{with clang}
 # On x86_64 architectures, Mozilla can build up to 4 jobs at once in parallel,
 # however builds tend to fail on other arches when building in parallel.
-RPM_BUILD_NR_THREADS=1
+MOZ_PARALLEL_BUILD=1
 %ifarch %{x8664}
-jobs=$(echo %{_smp_mflags} | cut -dj -f2)
-[ -n "$jobs" -a "$jobs" -gt 4 ] && RPM_BUILD_NR_THREADS=4 || RPM_BUILD_NR_THREADS="$jobs"
+jobs="%{__jobs}"
+[ -n "$jobs" -a "$jobs" -gt 4 ] && MOZ_PARALLEL_BUILD=4 || MOZ_PARALLEL_BUILD="$jobs"
 %endif
-export MOZ_MAKE_FLAGS="-j${RPM_BUILD_NR_THREADS}"
+export MOZ_PARALLEL_BUILD
+%else
+%{?__jobs:export MOZ_PARALLEL_BUILD="%__jobs"}
 %endif
 
 export MOZ_SERVICES_SYNC="1"
