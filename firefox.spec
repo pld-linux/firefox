@@ -244,6 +244,7 @@ Source191:	http://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i68
 Source192:	http://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/zh-TW.xpi
 # Source192-md5:	3837f29330593e310a87a9daa36157d5
 
+Patch0:		geckodriver-regex.patch
 Patch4:		%{name}-prefs.patch
 Patch5:		%{name}-pld-bookmarks.patch
 Patch6:		%{name}-no-subshell.patch
@@ -2020,6 +2021,7 @@ unpack() {
 %define __unzip unpack
 %setup -q %(seq -f '-a %g' 100 192 | xargs)
 
+%patch0 -p1
 %patch4 -p1
 %patch5 -p1
 %patch6 -p2
