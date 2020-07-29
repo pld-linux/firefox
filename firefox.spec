@@ -309,7 +309,7 @@ BuildRequires:	python-virtualenv >= 15
 BuildRequires:	python3-virtualenv >= 16
 BuildRequires:	rpm >= 4.4.9-56
 BuildRequires:	rpmbuild(macros) >= 1.601
-BuildRequires:	rust >= 1.32.0
+BuildRequires:	rust >= 1.43.0
 BuildRequires:	rust-cbindgen >= 0.14.3
 BuildRequires:	sed >= 4.0
 BuildRequires:	xorg-lib-libX11-devel
