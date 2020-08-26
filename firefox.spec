@@ -48,7 +48,7 @@ Summary(hu.UTF-8):	Firefox web böngésző
 Summary(pl.UTF-8):	Firefox - przeglądarka WWW
 Name:		firefox
 Version:	80.0
-Release:	1
+Release:	2
 License:	MPL v2.0
 Group:		X11/Applications/Networking
 Source0:	http://releases.mozilla.org/pub/firefox/releases/%{version}/source/firefox-%{version}.source.tar.xz
@@ -244,6 +244,7 @@ Source191:	http://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i68
 Source192:	http://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/zh-TW.xpi
 # Source192-md5:	4b084ac47b0106ae4a751ea35f4ad413
 
+Patch0:		geckodriver-version-check.patch
 Patch4:		%{name}-prefs.patch
 Patch5:		%{name}-pld-bookmarks.patch
 Patch6:		%{name}-no-subshell.patch
@@ -2020,6 +2021,7 @@ unpack() {
 %define __unzip unpack
 %setup -q %(seq -f '-a %g' 100 192 | xargs)
 
+%patch0 -p1
 %patch4 -p1
 %patch5 -p1
 %patch6 -p2
