@@ -307,10 +307,9 @@ BuildRequires:	perl-modules >= 5.004
 BuildRequires:	pkgconfig >= 1:0.9.0
 BuildRequires:	pkgconfig(libffi) >= 3.0.9
 BuildRequires:	pulseaudio-devel
-BuildRequires:	python-modules >= 1:2.5
-%{?with_pgo:BuildRequires:	python-modules-sqlite}
-BuildRequires:	python-simplejson
-BuildRequires:	python-virtualenv >= 15
+BuildRequires:	python3-modules >= 1:3.8.5-3
+%{?with_pgo:BuildRequires:	python3-modules-sqlite}
+BuildRequires:	python3-simplejson
 BuildRequires:	python3-virtualenv >= 16
 BuildRequires:	rpm >= 4.4.9-56
 BuildRequires:	rpmbuild(macros) >= 1.601
