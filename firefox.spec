@@ -4,7 +4,7 @@
 #
 # Conditional build:
 %bcond_with	tests		# enable tests (whatever they check)
-%bcond_without	kerberos	# disable krb5 support
+%bcond_with	gps		# GPS support via gpsd
 %bcond_without	official	# official Firefox branding
 %bcond_with	lto		# build with link time optimization
 %bcond_with	pgo		# PGO-enabled build (requires working $DISPLAY == :100)
@@ -263,7 +263,6 @@ BuildRequires:	alsa-lib-devel
 BuildRequires:	autoconf2_13
 BuildRequires:	automake
 %{?with_gold:BuildRequires:	binutils >= 3:2.20.51.0.7}
-BuildRequires:	bzip2-devel
 %{?with_system_cairo:BuildRequires:	cairo-devel >= 1.10.2-5}
 BuildRequires:	cargo >= 1.32.0
 %{?with_clang:BuildRequires:	clang}
@@ -271,17 +270,15 @@ BuildRequires:	clang-devel >= 3.9.0
 BuildRequires:	dbus-glib-devel >= 0.60
 BuildRequires:	fontconfig-devel >= 1:2.7.0
 BuildRequires:	freetype-devel >= 1:2.1.8
-%{!?with_clang:BuildRequires:	gcc-c++ >= 6:4.4}
+%{!?with_clang:BuildRequires:	gcc-c++ >= 6:7}
 BuildRequires:	glib2-devel >= 1:2.42
-BuildRequires:	gstreamer-devel >= 1.0
-BuildRequires:	gstreamer-plugins-base-devel >= 1.0
+%{?with_gps:BuildRequires:	gpsd-devel >= 3.11}
 BuildRequires:	gtk+2-devel >= 2:2.18.0
 BuildRequires:	gtk+3-devel >= 3.14.0
-%{?with_kerberos:BuildRequires:	heimdal-devel >= 0.7.1}
-BuildRequires:	libIDL-devel >= 0.8.0
 BuildRequires:	libatomic-devel
 # DECnet (dnprogs.spec), not dummy net (libdnet.spec)
 #BuildRequires:	libdnet-devel
+BuildRequires:	libdrm-devel >= 2.4
 BuildRequires:	libevent-devel >= 1.4.7
 # standalone libffi 3.0.9 or gcc's from 4.5(?)+
 BuildRequires:	libffi-devel >= 6:3.0.9
@@ -291,19 +288,22 @@ BuildRequires:	libjpeg-devel >= 6b
 BuildRequires:	libjpeg-turbo-devel
 BuildRequires:	libpng(APNG)-devel >= 0.10
 BuildRequires:	libpng-devel >= 2:1.6.35
-BuildRequires:	libstdc++-devel >= 6:4.4
+BuildRequires:	libstdc++-devel >= 6:7
 BuildRequires:	libxcb-devel
-%{?with_system_libvpx:BuildRequires:	libvpx-devel >= 1.7.0}
+%{?with_system_libvpx:BuildRequires:	libvpx-devel >= 1.8.0}
 BuildRequires:	libwebp-devel >= 1.0.2
 %{?with_clang:BuildRequires:	lld}
 BuildRequires:	llvm-devel >= 3.9.0
+%ifarch %{ix86} %{x8664}
+BuildRequires:	nasm >= 2.14
+%endif
 # or --disable-nodejs ?
 BuildRequires:	nodejs >= 10.19
 BuildRequires:	nspr-devel >= 1:%{nspr_ver}
 BuildRequires:	nss-devel >= 1:%{nss_ver}
 BuildRequires:	pango-devel >= 1:1.22.0
 BuildRequires:	pixman-devel >= 0.19.2
-BuildRequires:	perl-modules >= 5.004
+BuildRequires:	perl-modules >= 5.006
 BuildRequires:	pkgconfig >= 1:0.9.0
 BuildRequires:	pkgconfig(libffi) >= 3.0.9
 BuildRequires:	pulseaudio-devel
@@ -317,7 +317,6 @@ BuildRequires:	rust >= 1.43.0
 BuildRequires:	rust-cbindgen >= 0.14.3
 BuildRequires:	sed >= 4.0
 BuildRequires:	xorg-lib-libX11-devel
-BuildRequires:	xorg-lib-libXScrnSaver-devel
 BuildRequires:	xorg-lib-libXcomposite-devel
 BuildRequires:	xorg-lib-libXdamage-devel
 BuildRequires:	xorg-lib-libXext-devel
@@ -325,8 +324,9 @@ BuildRequires:	xorg-lib-libXfixes-devel
 BuildRequires:	xorg-lib-libXinerama-devel
 BuildRequires:	xorg-lib-libXt-devel
 %{?with_pgo:BuildRequires:	xorg-xserver-Xvfb}
-%ifarch %{x8664}
-BuildRequires:	yasm >= 1.0.1
+BuildRequires:	xorg-lib-libxkbcommon-devel >= 0.4.1
+%ifarch %{ix86} %{x8664}
+BuildRequires:	yasm >= 1.2
 %endif
 BuildRequires:	unzip
 BuildRequires:	zip
@@ -352,6 +352,7 @@ Requires:	nspr >= 1:%{nspr_ver}
 Requires:	nss >= 1:%{nss_ver}
 Requires:	pango >= 1:1.22.0
 Requires:	pixman >= 0.19.2
+Requires:	xorg-lib-libxkbcommon >= 0.4.1
 Provides:	xulrunner-libs = 2:%{version}-%{release}
 Provides:	wwwbrowser
 Obsoletes:	firefox-devel
@@ -2152,6 +2153,9 @@ ac_add_options --enable-extensions=default
 %{?with_gold:ac_add_options --enable-linker=gold}
 %ifarch %{ix86} %{x8664} %{arm}
 ac_add_options --disable-elf-hack
+%endif
+%if %{with gps}
+ac_add_options --enable-gpsd
 %endif
 %if %{with lto}
 ac_add_options --enable-lto
