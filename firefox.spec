@@ -353,6 +353,9 @@ Requires:	nss >= 1:%{nss_ver}
 Requires:	pango >= 1:1.22.0
 Requires:	pixman >= 0.19.2
 Requires:	xorg-lib-libxkbcommon >= 0.4.1
+%ifarch %{ix86}
+Requires:	cpuinfo(mmx)
+%endif
 Provides:	xulrunner-libs = 2:%{version}-%{release}
 Provides:	wwwbrowser
 Obsoletes:	firefox-devel
