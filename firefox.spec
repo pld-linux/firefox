@@ -249,7 +249,7 @@ Source194:	http://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i68
 # Source194-md5:	ee79c5c8a4cfbde96d2869a783eb130d
 Source195:	http://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/zh-TW.xpi
 # Source195-md5:	2c8465e58832bd0eea59d13e36d09e7f
-
+Patch0:		%{name}-time64.patch
 Patch4:		%{name}-prefs.patch
 Patch5:		%{name}-pld-bookmarks.patch
 Patch6:		%{name}-no-subshell.patch
@@ -2072,6 +2072,7 @@ unpack() {
 %define __unzip unpack
 %setup -q %(seq -f '-a %g' 100 195 | xargs)
 
+%patch0 -p1
 %patch4 -p1
 %patch5 -p1
 %patch6 -p2
