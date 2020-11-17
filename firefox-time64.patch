@@ -8,7 +8,7 @@
 +      case __NR_clock_nanosleep_time64:
 +#endif
        case __NR_clock_nanosleep:
-+#ifdef __NR_clock_nanosleep_time64
++#ifdef __NR_clock_getres_time64
 +      case __NR_clock_getres_time64:
 +#endif
        case __NR_clock_getres:
@@ -25,15 +25,15 @@
          // FIXME: This could be more restrictive....
          return Allow();
 @@ -523,6 +532,9 @@
-       case __NR_epoll_wait:
-       case __NR_epoll_pwait:
+       CASES_FOR_epoll_create:
+       CASES_FOR_epoll_wait:
        case __NR_epoll_ctl:
 +#ifdef __NR_ppoll_time64
 +      case __NR_ppoll_time64:
 +#endif
-       case __NR_ppoll:
-       case __NR_poll:
+       CASES_FOR_poll:
          return Allow();
+ 
 @@ -1095,6 +1107,9 @@
  #endif
  
@@ -41,6 +41,6 @@
 +#ifdef __NR_pselect6_time64
 +      case __NR_pselect6_time64:
 +#endif
-       case __NR_pselect6:
          return Allow();
  
+       CASES_FOR_getdents:
