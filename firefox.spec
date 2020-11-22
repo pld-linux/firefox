@@ -2338,7 +2338,7 @@ fi
 %attr(755,root,root) %{_libdir}/%{name}/libxul.so
 %attr(755,root,root) %{_libdir}/%{name}/libmozavcodec.so
 %attr(755,root,root) %{_libdir}/%{name}/libmozavutil.so
-%ifarch %{ix86} %{x8664}
+%ifarch %{ix86} %{x8664} %{arm} aarch64
 %attr(755,root,root) %{_libdir}/%{name}/libmozsandbox.so
 %endif
 %attr(755,root,root) %{_libdir}/%{name}/libmozsqlite3.so
