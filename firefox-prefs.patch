@@ -17,7 +17,7 @@
 +  pref("app.update.auto", false);
  #endif
  
- // If set to true, the Update Service will present no UI for any event.
+ // If set to true, the Update Service will apply updates in the background
 @@ -227,7 +227,7 @@
  pref("browser.touchmode.auto", true);
  
@@ -33,9 +33,9 @@
  
 +pref("intl.locale.matchOS", true);
 +
- // Scripts & Windows prefs
- pref("dom.disable_open_during_load",              true);
- pref("javascript.options.showInConsole",          true);
+ // Where new bookmarks go by default.
+ // Use PlacesUIUtils.defaultParentGuid to read this; do NOT read the pref
+ // directly.
 @@ -646,7 +648,7 @@
  pref("mousewheel.with_control.action",3);
  pref("mousewheel.with_win.action", 1);
@@ -54,5 +54,5 @@
 -pref("layout.css.dpi", -1);
 +pref("layout.css.dpi", 0);
  
- // Set the number of device pixels per CSS pixel. A value <= 0 means choose
- // automatically based on user settings for the platform (e.g., "UI scale factor"
+ // pref for which side vertical scrollbars should be on
+ // 0 = end-side in UI direction

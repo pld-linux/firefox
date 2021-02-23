@@ -8,6 +8,6 @@
 -            self.topsrcdir, "third_party", "python", "virtualenv", "virtualenv.py"
 -        )
 +        return '/usr/bin/virtualenv-3'
-
-    @property
-    def version_info(self):
+ 
+     @property
+     def version_info(self):
