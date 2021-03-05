@@ -310,7 +310,7 @@ BuildRequires:	python3-modules >= 1:3.8.5-3
 %{?with_pgo:BuildRequires:	python3-modules-sqlite}
 BuildRequires:	python3-simplejson
 BuildRequires:	python3-virtualenv >= 16
-BuildRequires:	rpm >= 4.4.9-56
+BuildRequires:	rpm-build >= 4.6
 BuildRequires:	rpmbuild(macros) >= 1.601
 BuildRequires:	rust >= 1.47.0
 BuildRequires:	rust-cbindgen >= 0.16.0
