@@ -359,22 +359,22 @@ Requires:	cpuinfo(mmx)
 %endif
 Provides:	xulrunner-libs = 2:%{version}-%{release}
 Provides:	wwwbrowser
-Obsoletes:	firefox-devel
+Obsoletes:	firefox-devel < 53
 Obsoletes:	firefox-lang-as < 68.0-1
 Obsoletes:	firefox-lang-en_ZA < 68.0-1
 Obsoletes:	firefox-lang-mai < 68.0-1
 Obsoletes:	firefox-lang-ml < 68.0-1
 Obsoletes:	firefox-lang-or < 68.0-1
-Obsoletes:	firefox-libs
-Obsoletes:	iceweasel
-Obsoletes:	iceweasel-libs
-Obsoletes:	mozilla-firebird
-Obsoletes:	mozilla-firefox
+Obsoletes:	firefox-libs < 53
+Obsoletes:	iceweasel < 45
+Obsoletes:	iceweasel-libs < 45
+Obsoletes:	mozilla-firebird < 0.8
+Obsoletes:	mozilla-firefox < 38
 Obsoletes:	mozilla-firefox-lang-en < 2.0.0.8-3
-Obsoletes:	mozilla-firefox-libs
-Obsoletes:	xulrunner
-Obsoletes:	xulrunner-gnome
-Obsoletes:	xulrunner-libs < 42
+Obsoletes:	mozilla-firefox-libs < 38
+Obsoletes:	xulrunner < 2:42
+Obsoletes:	xulrunner-gnome < 2:42
+Obsoletes:	xulrunner-libs < 2:42
 Conflicts:	firefox-lang-resources < %{version}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -428,8 +428,8 @@ Summary(pl.UTF-8):	Pliki językowe aczoli dla Firefoksa
 Group:		I18n
 Requires:	firefox >= %{version}
 Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-ach
-Obsoletes:	mozilla-firefox-lang-ach
+Obsoletes:	iceweasel-lang-ach < 45
+Obsoletes:	mozilla-firefox-lang-ach < 38
 BuildArch:	noarch
 
 %description lang-ach
@@ -444,8 +444,8 @@ Summary(pl.UTF-8):	Afrykanerskie pliki językowe dla Firefoksa
 Group:		I18n
 Requires:	firefox >= %{version}
 Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-af
-Obsoletes:	mozilla-firefox-lang-af
+Obsoletes:	iceweasel-lang-af < 45
+Obsoletes:	mozilla-firefox-lang-af < 38
 BuildArch:	noarch
 
 %description lang-af
@@ -460,8 +460,8 @@ Summary(pl.UTF-8):	Aragońskie pliki językowe dla Firefoksa
 Group:		I18n
 Requires:	firefox >= %{version}
 Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-an
-Obsoletes:	mozilla-firefox-lang-an
+Obsoletes:	iceweasel-lang-an < 45
+Obsoletes:	mozilla-firefox-lang-an < 38
 BuildArch:	noarch
 
 %description lang-an
@@ -476,8 +476,8 @@ Summary(pl.UTF-8):	Arabskie pliki językowe dla Firefoksa
 Group:		I18n
 Requires:	firefox >= %{version}
 Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-ar
-Obsoletes:	mozilla-firefox-lang-ar
+Obsoletes:	iceweasel-lang-ar < 45
+Obsoletes:	mozilla-firefox-lang-ar < 38
 BuildArch:	noarch
 
 %description lang-ar
@@ -492,8 +492,8 @@ Summary(pl.UTF-8):	Asturyjskie pliki językowe dla Firefoksa
 Group:		I18n
 Requires:	firefox >= %{version}
 Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-ast
-Obsoletes:	mozilla-firefox-lang-ast
+Obsoletes:	iceweasel-lang-ast < 45
+Obsoletes:	mozilla-firefox-lang-ast < 38
 BuildArch:	noarch
 
 %description lang-ast
@@ -508,8 +508,8 @@ Summary(pl.UTF-8):	Azerskie pliki językowe dla Firefoksa
 Group:		I18n
 Requires:	firefox >= %{version}
 Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-az
-Obsoletes:	mozilla-firefox-lang-az
+Obsoletes:	iceweasel-lang-az < 45
+Obsoletes:	mozilla-firefox-lang-az < 38
 BuildArch:	noarch
 
 %description lang-az
@@ -524,8 +524,8 @@ Summary(pl.UTF-8):	Białoruskie pliki językowe dla Firefoksa
 Group:		I18n
 Requires:	firefox >= %{version}
 Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-be
-Obsoletes:	mozilla-firefox-lang-be
+Obsoletes:	iceweasel-lang-be < 45
+Obsoletes:	mozilla-firefox-lang-be < 38
 BuildArch:	noarch
 
 %description lang-be
@@ -540,8 +540,8 @@ Summary(pl.UTF-8):	Bułgarskie pliki językowe dla Firefoksa
 Group:		I18n
 Requires:	firefox >= %{version}
 Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-bg
-Obsoletes:	mozilla-firefox-lang-bg
+Obsoletes:	iceweasel-lang-bg < 45
+Obsoletes:	mozilla-firefox-lang-bg < 38
 BuildArch:	noarch
 
 %description lang-bg
@@ -557,8 +557,8 @@ Group:		I18n
 Requires:	firefox >= %{version}
 Provides:	firefox-lang-resources = %{version}
 Obsoletes:	firefox-lang-bn_IN
-Obsoletes:	iceweasel-lang-bn
-Obsoletes:	mozilla-firefox-lang-bn
+Obsoletes:	iceweasel-lang-bn < 45
+Obsoletes:	mozilla-firefox-lang-bn < 38
 BuildArch:	noarch
 
 %description lang-bn
@@ -573,8 +573,8 @@ Summary(pl.UTF-8):	Bengalskie pliki językowe dla Firefoksa (wersja dla Indii)
 Group:		I18n
 Requires:	firefox >= %{version}
 Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-bn_IN
-Obsoletes:	mozilla-firefox-lang-bn_IN
+Obsoletes:	iceweasel-lang-bn_IN < 45
+Obsoletes:	mozilla-firefox-lang-bn_IN < 38
 BuildArch:	noarch
 
 %description lang-bn_IN
@@ -589,8 +589,8 @@ Summary(pl.UTF-8):	Bretońskie pliki językowe dla Firefoksa
 Group:		I18n
 Requires:	firefox >= %{version}
 Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-br
-Obsoletes:	mozilla-firefox-lang-br
+Obsoletes:	iceweasel-lang-br < 45
+Obsoletes:	mozilla-firefox-lang-br < 38
 BuildArch:	noarch
 
 %description lang-br
@@ -605,8 +605,8 @@ Summary(pl.UTF-8):	Bośniackie pliki językowe dla Firefoksa
 Group:		I18n
 Requires:	firefox >= %{version}
 Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-bs
-Obsoletes:	mozilla-firefox-lang-bs
+Obsoletes:	iceweasel-lang-bs < 45
+Obsoletes:	mozilla-firefox-lang-bs < 38
 BuildArch:	noarch
 
 %description lang-bs
@@ -624,8 +624,8 @@ Group:		I18n
 URL:		http://www.softcatala.org/projectes/mozilla/
 Requires:	firefox >= %{version}
 Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-ca
-Obsoletes:	mozilla-firefox-lang-ca
+Obsoletes:	iceweasel-lang-ca < 45
+Obsoletes:	mozilla-firefox-lang-ca < 38
 BuildArch:	noarch
 
 %description lang-ca
@@ -675,8 +675,8 @@ Summary(pl.UTF-8):	Czeskie pliki językowe dla Firefoksa
 Group:		I18n
 Requires:	firefox >= %{version}
 Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-cs
-Obsoletes:	mozilla-firefox-lang-cs
+Obsoletes:	iceweasel-lang-cs < 45
+Obsoletes:	mozilla-firefox-lang-cs < 38
 BuildArch:	noarch
 
 %description lang-cs
@@ -691,8 +691,8 @@ Summary(pl.UTF-8):	Kaszubskie pliki językowe dla Firefoksa
 Group:		I18n
 Requires:	firefox >= %{version}
 Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-csb
-Obsoletes:	mozilla-firefox-lang-csb
+Obsoletes:	iceweasel-lang-csb < 45
+Obsoletes:	mozilla-firefox-lang-csb < 38
 BuildArch:	noarch
 
 %description lang-csb
@@ -707,8 +707,8 @@ Summary(pl.UTF-8):	Walijskie pliki językowe dla Firefoksa
 Group:		I18n
 Requires:	firefox >= %{version}
 Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-cy
-Obsoletes:	mozilla-firefox-lang-cy
+Obsoletes:	iceweasel-lang-cy < 45
+Obsoletes:	mozilla-firefox-lang-cy < 38
 BuildArch:	noarch
 
 %description lang-cy
@@ -723,8 +723,8 @@ Summary(pl.UTF-8):	Duńskie pliki językowe dla Firefoksa
 Group:		I18n
 Requires:	firefox >= %{version}
 Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-da
-Obsoletes:	mozilla-firefox-lang-da
+Obsoletes:	iceweasel-lang-da < 45
+Obsoletes:	mozilla-firefox-lang-da < 38
 BuildArch:	noarch
 
 %description lang-da
@@ -739,8 +739,8 @@ Summary(pl.UTF-8):	Niemieckie pliki językowe dla Firefoksa
 Group:		I18n
 Requires:	firefox >= %{version}
 Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-de
-Obsoletes:	mozilla-firefox-lang-de
+Obsoletes:	iceweasel-lang-de < 45
+Obsoletes:	mozilla-firefox-lang-de < 38
 BuildArch:	noarch
 
 %description lang-de
@@ -755,8 +755,8 @@ Summary(pl.UTF-8):	Dolnołużyckie pliki językowe dla Firefoksa
 Group:		I18n
 Requires:	firefox >= %{version}
 Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-dsb
-Obsoletes:	mozilla-firefox-lang-dsb
+Obsoletes:	iceweasel-lang-dsb < 45
+Obsoletes:	mozilla-firefox-lang-dsb < 38
 BuildArch:	noarch
 
 %description lang-dsb
@@ -771,8 +771,8 @@ Summary(pl.UTF-8):	Greckie pliki językowe dla Firefoksa
 Group:		I18n
 Requires:	firefox >= %{version}
 Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-el
-Obsoletes:	mozilla-firefox-lang-el
+Obsoletes:	iceweasel-lang-el < 45
+Obsoletes:	mozilla-firefox-lang-el < 38
 BuildArch:	noarch
 
 %description lang-el
@@ -801,8 +801,8 @@ Summary(pl.UTF-8):	Angielskie (brytyjskie) pliki językowe dla Firefoksa
 Group:		I18n
 Requires:	firefox >= %{version}
 Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-en_GB
-Obsoletes:	mozilla-firefox-lang-en_GB
+Obsoletes:	iceweasel-lang-en_GB < 45
+Obsoletes:	mozilla-firefox-lang-en_GB < 38
 BuildArch:	noarch
 
 %description lang-en_GB
@@ -817,8 +817,8 @@ Summary(pl.UTF-8):	Angielskie (amerykańskie) pliki językowe dla Firefoksa
 Group:		I18n
 Requires:	firefox >= %{version}
 Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-en_US
-Obsoletes:	mozilla-firefox-lang-en_US
+Obsoletes:	iceweasel-lang-en_US < 45
+Obsoletes:	mozilla-firefox-lang-en_US < 38
 BuildArch:	noarch
 
 %description lang-en_US
@@ -833,8 +833,8 @@ Summary(pl.UTF-8):	Pliki językowe esperanto dla Firefoksa
 Group:		I18n
 Requires:	firefox >= %{version}
 Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-eo
-Obsoletes:	mozilla-firefox-lang-eo
+Obsoletes:	iceweasel-lang-eo < 45
+Obsoletes:	mozilla-firefox-lang-eo < 38
 BuildArch:	noarch
 
 %description lang-eo
@@ -851,8 +851,8 @@ Summary(pl.UTF-8):	Hiszpańskie pliki językowe dla Firefoksa (wersja dla Andory
 Group:		I18n
 Requires:	firefox >= %{version}
 Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-es_AR
-Obsoletes:	mozilla-firefox-lang-es_AR
+Obsoletes:	iceweasel-lang-es_AR < 45
+Obsoletes:	mozilla-firefox-lang-es_AR < 38
 BuildArch:	noarch
 
 %description lang-es_AR
@@ -875,8 +875,8 @@ Summary(pl.UTF-8):	Hiszpańskie pliki językowe dla Firefoksa (wersja dla Chile)
 Group:		I18n
 Requires:	firefox >= %{version}
 Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-es_CL
-Obsoletes:	mozilla-firefox-lang-es_CL
+Obsoletes:	iceweasel-lang-es_CL < 45
+Obsoletes:	mozilla-firefox-lang-es_CL < 38
 BuildArch:	noarch
 
 %description lang-es_CL
@@ -899,8 +899,8 @@ Summary(pl.UTF-8):	Hiszpańskie pliki językowe dla Firefoksa (wersja dla Hiszpa
 Group:		I18n
 Requires:	firefox >= %{version}
 Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-es
-Obsoletes:	mozilla-firefox-lang-es
+Obsoletes:	iceweasel-lang-es < 45
+Obsoletes:	mozilla-firefox-lang-es < 38
 BuildArch:	noarch
 
 %description lang-es
@@ -923,8 +923,8 @@ Summary(pl.UTF-8):	Hiszpańskie pliki językowe dla Firefoksa (wersja dla Meksyk
 Group:		I18n
 Requires:	firefox >= %{version}
 Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-es_MX
-Obsoletes:	mozilla-firefox-lang-es_MX
+Obsoletes:	iceweasel-lang-es_MX < 45
+Obsoletes:	mozilla-firefox-lang-es_MX < 38
 BuildArch:	noarch
 
 %description lang-es_MX
@@ -945,8 +945,8 @@ Summary(pl.UTF-8):	Estońskie pliki językowe dla Firefoksa
 Group:		I18n
 Requires:	firefox >= %{version}
 Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-et
-Obsoletes:	mozilla-firefox-lang-et
+Obsoletes:	iceweasel-lang-et < 45
+Obsoletes:	mozilla-firefox-lang-et < 38
 BuildArch:	noarch
 
 %description lang-et
@@ -961,8 +961,8 @@ Summary(pl.UTF-8):	Baskijskie pliki językowe dla Firefoksa
 Group:		I18n
 Requires:	firefox >= %{version}
 Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-eu
-Obsoletes:	mozilla-firefox-lang-eu
+Obsoletes:	iceweasel-lang-eu < 45
+Obsoletes:	mozilla-firefox-lang-eu < 38
 BuildArch:	noarch
 
 %description lang-eu
@@ -977,8 +977,8 @@ Summary(pl.UTF-8):	Perskie pliki językowe dla Firefoksa
 Group:		I18n
 Requires:	firefox >= %{version}
 Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-fa
-Obsoletes:	mozilla-firefox-lang-fa
+Obsoletes:	iceweasel-lang-fa < 45
+Obsoletes:	mozilla-firefox-lang-fa < 38
 BuildArch:	noarch
 
 %description lang-fa
@@ -993,8 +993,8 @@ Summary(pl.UTF-8):	Pliki językowe fulani dla Firefoksa
 Group:		I18n
 Requires:	firefox >= %{version}
 Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-ff
-Obsoletes:	mozilla-firefox-lang-ff
+Obsoletes:	iceweasel-lang-ff < 45
+Obsoletes:	mozilla-firefox-lang-ff < 38
 BuildArch:	noarch
 
 %description lang-ff
@@ -1009,8 +1009,8 @@ Summary(pl.UTF-8):	Fińskie pliki językowe dla Firefoksa
 Group:		I18n
 Requires:	firefox >= %{version}
 Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-fi
-Obsoletes:	mozilla-firefox-lang-fi
+Obsoletes:	iceweasel-lang-fi < 45
+Obsoletes:	mozilla-firefox-lang-fi < 38
 BuildArch:	noarch
 
 %description lang-fi
@@ -1025,8 +1025,8 @@ Summary(pl.UTF-8):	Francuskie pliki językowe dla Firefoksa
 Group:		I18n
 Requires:	firefox >= %{version}
 Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-fr
-Obsoletes:	mozilla-firefox-lang-fr
+Obsoletes:	iceweasel-lang-fr < 45
+Obsoletes:	mozilla-firefox-lang-fr < 38
 BuildArch:	noarch
 
 %description lang-fr
@@ -1041,8 +1041,8 @@ Summary(pl.UTF-8):	Fryzyjskie pliki językowe dla Firefoksa
 Group:		I18n
 Requires:	firefox >= %{version}
 Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-fy
-Obsoletes:	mozilla-firefox-lang-fy
+Obsoletes:	iceweasel-lang-fy < 45
+Obsoletes:	mozilla-firefox-lang-fy < 38
 BuildArch:	noarch
 
 %description lang-fy
@@ -1057,8 +1057,8 @@ Summary(pl.UTF-8):	Irlandzkie pliki językowe dla Firefoksa
 Group:		I18n
 Requires:	firefox >= %{version}
 Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-ga
-Obsoletes:	mozilla-firefox-lang-ga
+Obsoletes:	iceweasel-lang-ga < 45
+Obsoletes:	mozilla-firefox-lang-ga < 38
 BuildArch:	noarch
 
 %description lang-ga
@@ -1073,8 +1073,8 @@ Summary(pl.UTF-8):	Szkockie (gaelickie) pliki językowe dla Firefoksa
 Group:		I18n
 Requires:	firefox >= %{version}
 Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-gd
-Obsoletes:	mozilla-firefox-lang-gd
+Obsoletes:	iceweasel-lang-gd < 45
+Obsoletes:	mozilla-firefox-lang-gd < 38
 BuildArch:	noarch
 
 %description lang-gd
@@ -1089,8 +1089,8 @@ Summary(pl.UTF-8):	Galicyjskie pliki językowe dla Firefoksa
 Group:		I18n
 Requires:	firefox >= %{version}
 Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-gl
-Obsoletes:	mozilla-firefox-lang-gl
+Obsoletes:	iceweasel-lang-gl < 45
+Obsoletes:	mozilla-firefox-lang-gl < 38
 BuildArch:	noarch
 
 %description lang-gl
@@ -1105,8 +1105,8 @@ Summary(pl.UTF-8):	Pliki językowe guarani dla Firefoksa
 Group:		I18n
 Requires:	firefox >= %{version}
 Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-gn
-Obsoletes:	mozilla-firefox-lang-gn
+Obsoletes:	iceweasel-lang-gn < 45
+Obsoletes:	mozilla-firefox-lang-gn < 38
 BuildArch:	noarch
 
 %description lang-gn
@@ -1121,8 +1121,8 @@ Summary(pl.UTF-8):	Pliki językowe gudźarati dla Firefoksa
 Group:		I18n
 Requires:	firefox >= %{version}
 Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-gu
-Obsoletes:	mozilla-firefox-lang-gu
+Obsoletes:	iceweasel-lang-gu < 45
+Obsoletes:	mozilla-firefox-lang-gu < 38
 BuildArch:	noarch
 
 %description lang-gu
@@ -1137,8 +1137,8 @@ Summary(pl.UTF-8):	Hebrajskie pliki językowe dla Firefoksa
 Group:		I18n
 Requires:	firefox >= %{version}
 Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-he
-Obsoletes:	mozilla-firefox-lang-he
+Obsoletes:	iceweasel-lang-he < 45
+Obsoletes:	mozilla-firefox-lang-he < 38
 BuildArch:	noarch
 
 %description lang-he
@@ -1153,8 +1153,8 @@ Summary(pl.UTF-8):	Pliki językowe hindi dla Firefoksa
 Group:		I18n
 Requires:	firefox >= %{version}
 Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-hi
-Obsoletes:	mozilla-firefox-lang-hi
+Obsoletes:	iceweasel-lang-hi < 45
+Obsoletes:	mozilla-firefox-lang-hi < 38
 BuildArch:	noarch
 
 %description lang-hi
@@ -1169,8 +1169,8 @@ Summary(pl.UTF-8):	Chorwackie pliki językowe dla Firefoksa
 Group:		I18n
 Requires:	firefox >= %{version}
 Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-hr
-Obsoletes:	mozilla-firefox-lang-hr
+Obsoletes:	iceweasel-lang-hr < 45
+Obsoletes:	mozilla-firefox-lang-hr < 38
 BuildArch:	noarch
 
 %description lang-hr
@@ -1185,8 +1185,8 @@ Summary(pl.UTF-8):	Górnołużyckie pliki językowe dla Firefoksa
 Group:		I18n
 Requires:	firefox >= %{version}
 Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-hsb
-Obsoletes:	mozilla-firefox-lang-hsb
+Obsoletes:	iceweasel-lang-hsb < 45
+Obsoletes:	mozilla-firefox-lang-hsb < 38
 BuildArch:	noarch
 
 %description lang-hsb
@@ -1202,8 +1202,8 @@ Summary(pl.UTF-8):	Węgierskie pliki językowe dla Firefoksa
 Group:		I18n
 Requires:	firefox >= %{version}
 Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-hu
-Obsoletes:	mozilla-firefox-lang-hu
+Obsoletes:	iceweasel-lang-hu < 45
+Obsoletes:	mozilla-firefox-lang-hu < 38
 BuildArch:	noarch
 
 %description lang-hu
@@ -1221,8 +1221,8 @@ Summary(pl.UTF-8):	Ormiańskie pliki językowe dla Firefoksa
 Group:		I18n
 Requires:	firefox >= %{version}
 Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-hy
-Obsoletes:	mozilla-firefox-lang-hy
+Obsoletes:	iceweasel-lang-hy < 45
+Obsoletes:	mozilla-firefox-lang-hy < 38
 BuildArch:	noarch
 
 %description lang-hy
@@ -1251,8 +1251,8 @@ Summary(pl.UTF-8):	Indonezyjskie pliki językowe dla Firefoksa
 Group:		I18n
 Requires:	firefox >= %{version}
 Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-id
-Obsoletes:	mozilla-firefox-lang-id
+Obsoletes:	iceweasel-lang-id < 45
+Obsoletes:	mozilla-firefox-lang-id < 38
 BuildArch:	noarch
 
 %description lang-id
@@ -1267,8 +1267,8 @@ Summary(pl.UTF-8):	Islandzkie pliki językowe dla Firefoksa
 Group:		I18n
 Requires:	firefox >= %{version}
 Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-is
-Obsoletes:	mozilla-firefox-lang-is
+Obsoletes:	iceweasel-lang-is < 45
+Obsoletes:	mozilla-firefox-lang-is < 38
 BuildArch:	noarch
 
 %description lang-is
@@ -1283,8 +1283,8 @@ Summary(pl.UTF-8):	Włoskie pliki językowe dla Firefoksa
 Group:		I18n
 Requires:	firefox >= %{version}
 Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-it
-Obsoletes:	mozilla-firefox-lang-it
+Obsoletes:	iceweasel-lang-it < 45
+Obsoletes:	mozilla-firefox-lang-it < 38
 BuildArch:	noarch
 
 %description lang-it
@@ -1299,8 +1299,8 @@ Summary(pl.UTF-8):	Japońskie pliki językowe dla Firefoksa
 Group:		I18n
 Requires:	firefox >= %{version}
 Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-ja
-Obsoletes:	mozilla-firefox-lang-ja
+Obsoletes:	iceweasel-lang-ja < 45
+Obsoletes:	mozilla-firefox-lang-ja < 38
 BuildArch:	noarch
 
 %description lang-ja
@@ -1315,8 +1315,8 @@ Summary(pl.UTF-8):	Gruzińskie pliki językowe dla Firefoksa
 Group:		I18n
 Requires:	firefox >= %{version}
 Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-ka
-Obsoletes:	mozilla-firefox-lang-ka
+Obsoletes:	iceweasel-lang-ka < 45
+Obsoletes:	mozilla-firefox-lang-ka < 38
 BuildArch:	noarch
 
 %description lang-ka
@@ -1345,8 +1345,8 @@ Summary(pl.UTF-8):	Kazachskie pliki językowe dla Firefoksa
 Group:		I18n
 Requires:	firefox >= %{version}
 Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-kk
-Obsoletes:	mozilla-firefox-lang-kk
+Obsoletes:	iceweasel-lang-kk < 45
+Obsoletes:	mozilla-firefox-lang-kk < 38
 BuildArch:	noarch
 
 %description lang-kk
@@ -1361,8 +1361,8 @@ Summary(pl.UTF-8):	Khmerskie pliki językowe dla Firefoksa
 Group:		I18n
 Requires:	firefox >= %{version}
 Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-km
-Obsoletes:	mozilla-firefox-lang-km
+Obsoletes:	iceweasel-lang-km < 45
+Obsoletes:	mozilla-firefox-lang-km < 38
 BuildArch:	noarch
 
 %description lang-km
@@ -1377,8 +1377,8 @@ Summary(pl.UTF-8):	Pliki językowe kannada dla Firefoksa
 Group:		I18n
 Requires:	firefox >= %{version}
 Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-kn
-Obsoletes:	mozilla-firefox-lang-kn
+Obsoletes:	iceweasel-lang-kn < 45
+Obsoletes:	mozilla-firefox-lang-kn < 38
 BuildArch:	noarch
 
 %description lang-kn
@@ -1393,8 +1393,8 @@ Summary(pl.UTF-8):	Koreańskie pliki językowe dla Firefoksa
 Group:		I18n
 Requires:	firefox >= %{version}
 Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-ko
-Obsoletes:	mozilla-firefox-lang-ko
+Obsoletes:	iceweasel-lang-ko < 45
+Obsoletes:	mozilla-firefox-lang-ko < 38
 BuildArch:	noarch
 
 %description lang-ko
@@ -1409,8 +1409,8 @@ Summary(pl.UTF-8):	Kurdyjskie pliki językowe dla Firefoksa
 Group:		I18n
 Requires:	firefox >= %{version}
 Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-ku
-Obsoletes:	mozilla-firefox-lang-ku
+Obsoletes:	iceweasel-lang-ku < 45
+Obsoletes:	mozilla-firefox-lang-ku < 38
 BuildArch:	noarch
 
 %description lang-ku
@@ -1425,8 +1425,8 @@ Summary(pl.UTF-8):	Liguryjskie pliki językowe dla Firefoksa
 Group:		I18n
 Requires:	firefox >= %{version}
 Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-lij
-Obsoletes:	mozilla-firefox-lang-lij
+Obsoletes:	iceweasel-lang-lij < 45
+Obsoletes:	mozilla-firefox-lang-lij < 38
 BuildArch:	noarch
 
 %description lang-lij
@@ -1441,8 +1441,8 @@ Summary(pl.UTF-8):	Litewskie pliki językowe dla Firefoksa
 Group:		I18n
 Requires:	firefox >= %{version}
 Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-lt
-Obsoletes:	mozilla-firefox-lang-lt
+Obsoletes:	iceweasel-lang-lt < 45
+Obsoletes:	mozilla-firefox-lang-lt < 38
 BuildArch:	noarch
 
 %description lang-lt
@@ -1457,8 +1457,8 @@ Summary(pl.UTF-8):	Łotewskie pliki językowe dla Firefoksa
 Group:		I18n
 Requires:	firefox >= %{version}
 Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-lv
-Obsoletes:	mozilla-firefox-lang-lv
+Obsoletes:	iceweasel-lang-lv < 45
+Obsoletes:	mozilla-firefox-lang-lv < 38
 BuildArch:	noarch
 
 %description lang-lv
@@ -1473,8 +1473,8 @@ Summary(pl.UTF-8):	Macedońskie pliki językowe dla Firefoksa
 Group:		I18n
 Requires:	firefox >= %{version}
 Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-mk
-Obsoletes:	mozilla-firefox-lang-mk
+Obsoletes:	iceweasel-lang-mk < 45
+Obsoletes:	mozilla-firefox-lang-mk < 38
 BuildArch:	noarch
 
 %description lang-mk
@@ -1489,8 +1489,8 @@ Summary(pl.UTF-8):	Pliki językowe marathi dla Firefoksa
 Group:		I18n
 Requires:	firefox >= %{version}
 Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-mr
-Obsoletes:	mozilla-firefox-lang-mr
+Obsoletes:	iceweasel-lang-mr < 45
+Obsoletes:	mozilla-firefox-lang-mr < 38
 BuildArch:	noarch
 
 %description lang-mr
@@ -1505,8 +1505,8 @@ Summary(pl.UTF-8):	Malajskie pliki językowe dla Firefoksa
 Group:		I18n
 Requires:	firefox >= %{version}
 Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-ms
-Obsoletes:	mozilla-firefox-lang-ms
+Obsoletes:	iceweasel-lang-ms < 45
+Obsoletes:	mozilla-firefox-lang-ms < 38
 BuildArch:	noarch
 
 %description lang-ms
@@ -1535,8 +1535,8 @@ Summary(pl.UTF-8):	Norweskie (bokmaal) pliki językowe dla Firefoksa
 Group:		I18n
 Requires:	firefox >= %{version}
 Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-nb
-Obsoletes:	mozilla-firefox-lang-nb
+Obsoletes:	iceweasel-lang-nb < 45
+Obsoletes:	mozilla-firefox-lang-nb < 38
 BuildArch:	noarch
 
 %description lang-nb
@@ -1565,8 +1565,8 @@ Summary(pl.UTF-8):	Holenderskie pliki językowe dla Firefoksa
 Group:		I18n
 Requires:	firefox >= %{version}
 Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-nl
-Obsoletes:	mozilla-firefox-lang-nl
+Obsoletes:	iceweasel-lang-nl < 45
+Obsoletes:	mozilla-firefox-lang-nl < 38
 BuildArch:	noarch
 
 %description lang-nl
@@ -1581,8 +1581,8 @@ Summary(pl.UTF-8):	Norweskie (nynorsk) pliki językowe dla Firefoksa
 Group:		I18n
 Requires:	firefox >= %{version}
 Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-nn
-Obsoletes:	mozilla-firefox-lang-nn
+Obsoletes:	iceweasel-lang-nn < 45
+Obsoletes:	mozilla-firefox-lang-nn < 38
 BuildArch:	noarch
 
 %description lang-nn
@@ -1611,8 +1611,8 @@ Summary(pl.UTF-8):	Pendżabskie pliki językowe dla Firefoksa
 Group:		I18n
 Requires:	firefox >= %{version}
 Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-pa
-Obsoletes:	mozilla-firefox-lang-pa
+Obsoletes:	iceweasel-lang-pa < 45
+Obsoletes:	mozilla-firefox-lang-pa < 38
 BuildArch:	noarch
 
 %description lang-pa
@@ -1628,8 +1628,8 @@ Group:		I18n
 URL:		http://www.firefox.pl/
 Requires:	firefox >= %{version}
 Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-pl
-Obsoletes:	mozilla-firefox-lang-pl
+Obsoletes:	iceweasel-lang-pl < 45
+Obsoletes:	mozilla-firefox-lang-pl < 38
 BuildArch:	noarch
 
 %description lang-pl
@@ -1644,8 +1644,8 @@ Summary(pl.UTF-8):	Portugalskie (brazylijskie) pliki językowe dla Firefoksa
 Group:		I18n
 Requires:	firefox >= %{version}
 Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-pt_BR
-Obsoletes:	mozilla-firefox-lang-pt_BR
+Obsoletes:	iceweasel-lang-pt_BR < 45
+Obsoletes:	mozilla-firefox-lang-pt_BR < 38
 BuildArch:	noarch
 
 %description lang-pt_BR
@@ -1660,8 +1660,8 @@ Summary(pl.UTF-8):	Portugalskie pliki językowe dla Firefoksa (wersja dla Portug
 Group:		I18n
 Requires:	firefox >= %{version}
 Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-pt
-Obsoletes:	mozilla-firefox-lang-pt
+Obsoletes:	iceweasel-lang-pt < 45
+Obsoletes:	mozilla-firefox-lang-pt < 38
 BuildArch:	noarch
 
 %description lang-pt
@@ -1676,8 +1676,8 @@ Summary(pl.UTF-8):	Retoromańskie pliki językowe dla Firefoksa
 Group:		I18n
 Requires:	firefox >= %{version}
 Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-rm
-Obsoletes:	mozilla-firefox-lang-rm
+Obsoletes:	iceweasel-lang-rm < 45
+Obsoletes:	mozilla-firefox-lang-rm < 38
 BuildArch:	noarch
 
 %description lang-rm
@@ -1692,8 +1692,8 @@ Summary(pl.UTF-8):	Rumuńskie pliki językowe dla Firefoksa
 Group:		I18n
 Requires:	firefox >= %{version}
 Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-ro
-Obsoletes:	mozilla-firefox-lang-ro
+Obsoletes:	iceweasel-lang-ro < 45
+Obsoletes:	mozilla-firefox-lang-ro < 38
 BuildArch:	noarch
 
 %description lang-ro
@@ -1708,8 +1708,8 @@ Summary(pl.UTF-8):	Rosyjskie pliki językowe dla Firefoksa
 Group:		I18n
 Requires:	firefox >= %{version}
 Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-ru
-Obsoletes:	mozilla-firefox-lang-ru
+Obsoletes:	iceweasel-lang-ru < 45
+Obsoletes:	mozilla-firefox-lang-ru < 38
 BuildArch:	noarch
 
 %description lang-ru
@@ -1724,8 +1724,8 @@ Summary(pl.UTF-8):	Syngaleskie pliki językowe dla Firefoksa
 Group:		I18n
 Requires:	firefox >= %{version}
 Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-si
-Obsoletes:	mozilla-firefox-lang-si
+Obsoletes:	iceweasel-lang-si < 45
+Obsoletes:	mozilla-firefox-lang-si < 38
 BuildArch:	noarch
 
 %description lang-si
@@ -1740,8 +1740,8 @@ Summary(pl.UTF-8):	Słowackie pliki językowe dla Firefoksa
 Group:		I18n
 Requires:	firefox >= %{version}
 Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-sk
-Obsoletes:	mozilla-firefox-lang-sk
+Obsoletes:	iceweasel-lang-sk < 45
+Obsoletes:	mozilla-firefox-lang-sk < 38
 BuildArch:	noarch
 
 %description lang-sk
@@ -1756,8 +1756,8 @@ Summary(pl.UTF-8):	Słoweńskie pliki językowe dla Firefoksa
 Group:		I18n
 Requires:	firefox >= %{version}
 Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-sl
-Obsoletes:	mozilla-firefox-lang-sl
+Obsoletes:	iceweasel-lang-sl < 45
+Obsoletes:	mozilla-firefox-lang-sl < 38
 BuildArch:	noarch
 
 %description lang-sl
@@ -1772,8 +1772,8 @@ Summary(pl.UTF-8):	Songhajskie pliki językowe dla Firefoksa
 Group:		I18n
 Requires:	firefox >= %{version}
 Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-son
-Obsoletes:	mozilla-firefox-lang-son
+Obsoletes:	iceweasel-lang-son < 45
+Obsoletes:	mozilla-firefox-lang-son < 38
 BuildArch:	noarch
 
 %description lang-son
@@ -1788,8 +1788,8 @@ Summary(pl.UTF-8):	Albańskie pliki językowe dla Firefoksa
 Group:		I18n
 Requires:	firefox >= %{version}
 Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-sq
-Obsoletes:	mozilla-firefox-lang-sq
+Obsoletes:	iceweasel-lang-sq < 45
+Obsoletes:	mozilla-firefox-lang-sq < 38
 BuildArch:	noarch
 
 %description lang-sq
@@ -1804,8 +1804,8 @@ Summary(pl.UTF-8):	Serbskie pliki językowe dla Firefoksa
 Group:		I18n
 Requires:	firefox >= %{version}
 Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-sr
-Obsoletes:	mozilla-firefox-lang-sr
+Obsoletes:	iceweasel-lang-sr < 45
+Obsoletes:	mozilla-firefox-lang-sr < 38
 BuildArch:	noarch
 
 %description lang-sr
@@ -1820,8 +1820,8 @@ Summary(pl.UTF-8):	Szwedzkie pliki językowe dla Firefoksa
 Group:		I18n
 Requires:	firefox >= %{version}
 Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-sv
-Obsoletes:	mozilla-firefox-lang-sv
+Obsoletes:	iceweasel-lang-sv < 45
+Obsoletes:	mozilla-firefox-lang-sv < 38
 BuildArch:	noarch
 
 %description lang-sv
@@ -1836,8 +1836,8 @@ Summary(pl.UTF-8):	Tamilskie pliki językowe dla Firefoksa (wersja dla Indii)
 Group:		I18n
 Requires:	firefox >= %{version}
 Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-ta
-Obsoletes:	mozilla-firefox-lang-ta
+Obsoletes:	iceweasel-lang-ta < 45
+Obsoletes:	mozilla-firefox-lang-ta < 38
 BuildArch:	noarch
 
 %description lang-ta
@@ -1852,8 +1852,8 @@ Summary(pl.UTF-8):	Pliki językowe telugu dla Firefoksa
 Group:		I18n
 Requires:	firefox >= %{version}
 Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-te
-Obsoletes:	mozilla-firefox-lang-te
+Obsoletes:	iceweasel-lang-te < 45
+Obsoletes:	mozilla-firefox-lang-te < 38
 BuildArch:	noarch
 
 %description lang-te
@@ -1868,8 +1868,8 @@ Summary(pl.UTF-8):	Tajskie pliki językowe dla Firefoksa
 Group:		I18n
 Requires:	firefox >= %{version}
 Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-th
-Obsoletes:	mozilla-firefox-lang-th
+Obsoletes:	iceweasel-lang-th < 45
+Obsoletes:	mozilla-firefox-lang-th < 38
 BuildArch:	noarch
 
 %description lang-th
@@ -1898,8 +1898,8 @@ Summary(pl.UTF-8):	Tureckie pliki językowe dla Firefoksa
 Group:		I18n
 Requires:	firefox >= %{version}
 Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-tr
-Obsoletes:	mozilla-firefox-lang-tr
+Obsoletes:	iceweasel-lang-tr < 45
+Obsoletes:	mozilla-firefox-lang-tr < 38
 BuildArch:	noarch
 
 %description lang-tr
@@ -1928,8 +1928,8 @@ Summary(pl.UTF-8):	Ukraińskie pliki językowe dla Firefoksa
 Group:		I18n
 Requires:	firefox >= %{version}
 Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-uk
-Obsoletes:	mozilla-firefox-lang-uk
+Obsoletes:	iceweasel-lang-uk < 45
+Obsoletes:	mozilla-firefox-lang-uk < 38
 BuildArch:	noarch
 
 %description lang-uk
@@ -1958,8 +1958,8 @@ Summary(pl.UTF-8):	Uzbeckie pliki językowe dla Firefoksa
 Group:		I18n
 Requires:	firefox >= %{version}
 Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-uz
-Obsoletes:	mozilla-firefox-lang-uz
+Obsoletes:	iceweasel-lang-uz < 45
+Obsoletes:	mozilla-firefox-lang-uz < 38
 BuildArch:	noarch
 
 %description lang-uz
@@ -1974,8 +1974,8 @@ Summary(pl.UTF-8):	Wietnamskie pliki językowe dla Firefoksa
 Group:		I18n
 Requires:	firefox >= %{version}
 Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-vi
-Obsoletes:	mozilla-firefox-lang-vi
+Obsoletes:	iceweasel-lang-vi < 45
+Obsoletes:	mozilla-firefox-lang-vi < 38
 BuildArch:	noarch
 
 %description lang-vi
@@ -1990,8 +1990,8 @@ Summary(pl.UTF-8):	Pliki językowe xhosa dla Firefoksa
 Group:		I18n
 Requires:	firefox >= %{version}
 Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-xh
-Obsoletes:	mozilla-firefox-lang-xh
+Obsoletes:	iceweasel-lang-xh < 45
+Obsoletes:	mozilla-firefox-lang-xh < 38
 BuildArch:	noarch
 
 %description lang-xh
@@ -2006,8 +2006,8 @@ Summary(pl.UTF-8):	Chińskie (uproszczone) pliki językowe dla Firefoksa
 Group:		I18n
 Requires:	firefox >= %{version}
 Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-zh_CN
-Obsoletes:	mozilla-firefox-lang-zh_CN
+Obsoletes:	iceweasel-lang-zh_CN < 45
+Obsoletes:	mozilla-firefox-lang-zh_CN < 38
 BuildArch:	noarch
 
 %description lang-zh_CN
@@ -2022,8 +2022,8 @@ Summary(pl.UTF-8):	Chińskie tradycyjne pliki językowe dla Firefoksa
 Group:		I18n
 Requires:	firefox >= %{version}
 Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-zh_TW
-Obsoletes:	mozilla-firefox-lang-zh_TW
+Obsoletes:	iceweasel-lang-zh_TW < 45
+Obsoletes:	mozilla-firefox-lang-zh_TW < 38
 BuildArch:	noarch
 
 %description lang-zh_TW
@@ -2038,8 +2038,8 @@ Summary(pl.UTF-8):	Zuluskie pliki językowe dla Firefoksa
 Group:		I18n
 Requires:	firefox >= %{version}
 Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-zu
-Obsoletes:	mozilla-firefox-lang-zu
+Obsoletes:	iceweasel-lang-zu < 45
+Obsoletes:	mozilla-firefox-lang-zu < 38
 BuildArch:	noarch
 
 %description lang-zu
