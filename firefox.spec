@@ -349,8 +349,8 @@ Requires:	libpng(APNG) >= 0.10
 %{?with_system_libvpx:Requires:	libvpx >= 1.8.0}
 Requires:	libwebp >= 1.0.2
 Requires:	myspell-common
-Requires:	nspr >= 1:%{nspr_ver}
-Requires:	nss >= 1:%{nss_ver}
+%requires_ge_to	nspr nspr-devel
+%requires_ge_to	nss nss-devel
 Requires:	pango >= 1:1.22.0
 Requires:	pixman >= 0.19.2
 Requires:	xorg-lib-libxkbcommon >= 0.4.1
