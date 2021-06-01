@@ -19,7 +19,7 @@
  
  // If set to true, the Update Service will apply updates in the background
 @@ -227,7 +227,7 @@
- pref("browser.touchmode.auto", true);
+ pref("browser.compactmode.show", false);
  
  // At startup, check if we're the default browser and prompt user if not.
 -pref("browser.shell.checkDefaultBrowser", true);
