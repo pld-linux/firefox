@@ -17,6 +17,7 @@
 %bcond_without	system_libvpx	# build with system libvpx
 %bcond_without	clang		# build using Clang/LLVM
 %bcond_with	lowmem		# lower memory requirements
+%bcond_with	rust_simd	# enable SIMD in Rust code
 
 %if %{with lto}
 %define		with_clang	1
@@ -2163,6 +2164,7 @@ ac_add_options --enable-gpsd
 ac_add_options --enable-lto=cross
 %endif
 %{?with_clang:ac_add_options --enable-linker=lld}
+%{?with_rust_simd:ac_add_options --enable-rust-simd}
 %{?with_shared_js:ac_add_options --enable-shared-js}
 %{?with_system_cairo:ac_add_options --enable-system-cairo}
 ac_add_options --enable-system-ffi
