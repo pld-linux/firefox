@@ -2160,7 +2160,7 @@ ac_add_options --disable-elf-hack
 ac_add_options --enable-gpsd
 %endif
 %if %{with lto}
-ac_add_options --enable-lto
+ac_add_options --enable-lto=cross
 %endif
 %{?with_clang:ac_add_options --enable-linker=lld}
 %{?with_shared_js:ac_add_options --enable-shared-js}
