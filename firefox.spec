@@ -2149,7 +2149,7 @@ ac_add_options --disable-necko-wifi
 ac_add_options --disable-updater
 ac_add_options --enable-alsa
 ac_add_options --enable-chrome-format=omni
-ac_add_options --enable-default-toolkit=cairo-gtk3
+ac_add_options --enable-default-toolkit=cairo-gtk3-wayland
 ac_add_options --enable-extensions=default
 %{?with_geckodriver:ac_add_options --enable-geckodriver}
 %{?with_gold:ac_add_options --enable-linker=gold}
