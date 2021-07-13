@@ -9,5 +9,5 @@
 -        )
 +        return '/usr/bin/virtualenv-3'
  
-     @property
      def version_info(self):
+         return eval(
