@@ -49,7 +49,7 @@ Summary(hu.UTF-8):	Firefox web böngésző
 Summary(pl.UTF-8):	Firefox - przeglądarka WWW
 Name:		firefox
 Version:	91.0.1
-Release:	1
+Release:	2
 License:	MPL v2.0
 Group:		X11/Applications/Networking
 Source0:	https://releases.mozilla.org/pub/firefox/releases/%{version}/source/firefox-%{version}.source.tar.xz
@@ -250,6 +250,7 @@ Source194:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i6
 # Source194-md5:	d2a2d12f650d6b7186b31112e5e8db07
 Source195:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/zh-TW.xpi
 # Source195-md5:	854e566bf0239dcd14a75a309379f715
+Patch0:		glibc2.34.patch
 Patch4:		%{name}-prefs.patch
 Patch5:		%{name}-pld-bookmarks.patch
 Patch6:		%{name}-no-subshell.patch
@@ -2072,6 +2073,7 @@ unpack() {
 %define __unzip unpack
 %setup -q %(seq -f '-a %g' 100 195 | xargs)
 
+%patch0 -p1
 %patch4 -p1
 %patch5 -p1
 %patch6 -p2
