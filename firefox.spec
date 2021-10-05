@@ -42,7 +42,7 @@ curl -s $U | sed -ne 's,.*href="\([^"]\+\)/".*,'"$U"'xpi/\1.xpi,p'
 %endif
 
 %define		nspr_ver	4.32
-%define		nss_ver		3.69
+%define		nss_ver		3.70
 
 Summary:	Firefox web browser
 Summary(hu.UTF-8):	Firefox web böngésző
