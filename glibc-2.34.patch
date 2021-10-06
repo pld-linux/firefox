@@ -12,3 +12,17 @@
  pref("general.useragent.compatMode.firefox", false);
  
  pref("general.config.obscure_value", 13); // for MCD .cfg files
+--- firefox-93.0/browser/app/profile/firefox.js~	2021-10-06 09:50:42.000000000 +0200
++++ firefox-93.0/browser/app/profile/firefox.js	2021-10-06 19:19:15.409293732 +0200
+@@ -1233,7 +1233,10 @@
+   // the sandbox while we fix their problems, or to allow running Firefox with
+   // exotic configurations we can't reasonably support out of the box.
+   //
+-  pref("security.sandbox.content.level", 4);
++// Lower from 4 to 2 due to extension problems on glibc 2.34
++// https://lists.pld-linux.org/mailman/pipermail/pld-devel-en/2021-October/026375.html
++// https://wiki.mozilla.org/Security/Sandbox#Content_Levels
++  pref("security.sandbox.content.level", 2);
+   // Introduced as part of bug 1608558.  Linux is currently the only platform
+   // that uses a sandbox level for the socket process.  There are currently
+   // only 2 levels:
