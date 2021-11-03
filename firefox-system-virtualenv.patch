@@ -1,13 +1,13 @@
 --- xulrunner-27.0/mozilla/python/mozbuild/mozbuild/virtualenv.py~	2013-05-11 21:19:23.000000000 +0200
 +++ xulrunner-27.0/mozilla/python/mozbuild/mozbuild/virtualenv.py	2013-05-14 22:51:32.136719267 +0200
-@@ -71,9 +71,7 @@
-     @property
-     def virtualenv_script_path(self):
-         """Path to virtualenv's own populator script."""
--        return os.path.join(
--            self.topsrcdir, "third_party", "python", "virtualenv", "virtualenv.py"
--        )
-+        return '/usr/bin/virtualenv-3'
+@@ -300,9 +300,7 @@
  
-     def version_info(self):
-         return eval(
+         args = [
+             self._base_python,
+-            os.path.join(
+-                self.topsrcdir, "third_party", "python", "virtualenv", "virtualenv.py"
+-            ),
++            '/usr/bin/virtualenv-3',
+             # Without this, virtualenv.py may attempt to contact the outside
+             # world and search for or download a newer version of pip,
+             # setuptools, or wheel. This is bad for security, reproducibility,
