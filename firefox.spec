@@ -51,7 +51,7 @@ Summary(hu.UTF-8):	Firefox web böngésző
 Summary(pl.UTF-8):	Firefox - przeglądarka WWW
 Name:		firefox
 Version:	95.0.1
-Release:	1
+Release:	2
 License:	MPL v2.0
 Group:		X11/Applications/Networking
 Source0:	https://releases.mozilla.org/pub/firefox/releases/%{version}/source/firefox-%{version}.source.tar.xz
@@ -256,6 +256,7 @@ Source196:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i6
 # Source196-md5:	f95b9d914fe1872d6270c79fc47cfc80
 Source197:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/zh-TW.xpi
 # Source197-md5:	6b56a60a7cb22c1be1f7e8448b928cb7
+Patch0:		wayland-1.20.patch
 Patch4:		%{name}-prefs.patch
 Patch5:		%{name}-pld-bookmarks.patch
 Patch6:		%{name}-no-subshell.patch
@@ -2109,6 +2110,7 @@ unpack() {
 %define __unzip unpack
 %setup -q %(seq -f '-a %g' 100 197 | xargs)
 
+%patch0 -p1
 %patch4 -p1
 %patch5 -p1
 %patch6 -p2
