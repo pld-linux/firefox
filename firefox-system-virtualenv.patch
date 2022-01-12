@@ -1,13 +1,14 @@
---- xulrunner-27.0/mozilla/python/mozbuild/mozbuild/virtualenv.py~	2013-05-11 21:19:23.000000000 +0200
-+++ xulrunner-27.0/mozilla/python/mozbuild/mozbuild/virtualenv.py	2013-05-14 22:51:32.136719267 +0200
-@@ -300,9 +300,7 @@
+--- firefox-96.0/python/mach/mach/site.py.orig	2022-01-06 19:32:46.000000000 +0100
++++ firefox-96.0/python/mach/mach/site.py	2022-01-12 13:21:03.273897180 +0100
+@@ -848,10 +848,7 @@
  
-         args = [
-             self._base_python,
--            os.path.join(
--                self.topsrcdir, "third_party", "python", "virtualenv", "virtualenv.py"
--            ),
-+            '/usr/bin/virtualenv-3',
-             # Without this, virtualenv.py may attempt to contact the outside
-             # world and search for or download a newer version of pip,
-             # setuptools, or wheel. This is bad for security, reproducibility,
+ 
+ def _virtualenv_py_path(topsrcdir):
+-    return os.path.join(
+-        topsrcdir, "third_party", "python", "virtualenv", "virtualenv.py"
+-    )
+-
++    return '/usr/bin/virtualenv-3'
+ 
+ def _system_python_env_variable_present():
+     return any(
