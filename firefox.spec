@@ -2237,6 +2237,7 @@ export MOZ_PARALLEL_BUILD
 
 export MOZ_SERVICES_SYNC="1"
 export MOZBUILD_STATE_PATH="$(pwd)/.mozbuild"
+export MACH_SYSTEM_ASSERTED_COMPATIBLE_WITH_MACH_SITE=1
 %if %{with pgo}
 D=$(( RANDOM % (200 - 100 + 1 ) + 5 ))
 /usr/bin/Xvfb :${D} &
