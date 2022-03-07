@@ -278,7 +278,7 @@ BuildRequires:	cargo >= 1.32.0
 BuildRequires:	clang-devel >= 5.0
 BuildRequires:	dbus-glib-devel >= 0.60
 BuildRequires:	fontconfig-devel >= 1:2.7.0
-BuildRequires:	freetype-devel >= 1:2.1.8
+BuildRequires:	freetype-devel >= 1:2.2.1
 %{!?with_clang:BuildRequires:	gcc-c++ >= 6:7}
 BuildRequires:	glib2-devel >= 1:2.42
 %{?with_gps:BuildRequires:	gpsd-devel >= 3.11}
@@ -327,11 +327,14 @@ BuildRequires:	sed >= 4.0
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xorg-lib-libX11-devel
 BuildRequires:	xorg-lib-libXcomposite-devel
+BuildRequires:	xorg-lib-libXcursor-devel
 BuildRequires:	xorg-lib-libXdamage-devel
 BuildRequires:	xorg-lib-libXext-devel
 BuildRequires:	xorg-lib-libXfixes-devel
+BuildRequires:	xorg-lib-libXi-devel
 BuildRequires:	xorg-lib-libXinerama-devel
-BuildRequires:	xorg-lib-libXt-devel
+BuildRequires:	xorg-lib-libXrandr-devel >= 1.4.0
+BuildRequires:	xorg-lib-libXtst-devel
 %{?with_pgo:BuildRequires:	xorg-xserver-Xvfb}
 BuildRequires:	xorg-lib-libxkbcommon-devel >= 0.4.1
 BuildRequires:	xz
@@ -348,6 +351,7 @@ Requires:	browser-plugins >= 2.0
 Requires:	dbus-glib >= 0.60
 Requires:	desktop-file-utils
 Requires:	fontconfig-libs >= 1:2.7.0
+Requires:	freetype >= 1:2.2.1
 Requires:	glib2 >= 1:2.42
 Requires:	gtk+3 >= 3.14.0
 Requires:	hicolor-icon-theme
@@ -361,6 +365,7 @@ Requires:	myspell-common
 %requires_ge_to	nss nss-devel
 Requires:	pango >= 1:1.22.0
 Requires:	pixman >= 0.36.0
+Requires:	xorg-lib-libXrandr >= 1.4.0
 Requires:	xorg-lib-libxkbcommon >= 0.4.1
 %ifarch %{ix86}
 Requires:	cpuinfo(mmx)
