@@ -1,10 +1,9 @@
-diff -ruN firefox-52.0.orig/browser/locales/generic/profile/bookmarks.html.in firefox-52.0/browser/locales/generic/profile/bookmarks.html.in
---- firefox-52.0.orig/browser/locales/generic/profile/bookmarks.html.in	2017-02-27 17:10:58.000000000 +0100
-+++ firefox-52.0/browser/locales/generic/profile/bookmarks.html.in	2017-03-09 10:43:14.423697112 +0100
-@@ -38,6 +38,14 @@
-             <dt><a href="https://www.mozilla.org/@AB_CD@/contribute/" icon="@mozilla_icon@">@firefox_community@</a>
-             <dt><a href="https://www.mozilla.org/@AB_CD@/about/" icon="@mozilla_icon@">@firefox_about@</a>
-         </dl>
+--- firefox-98.0/browser/base/content/default-bookmarks.html.orig	2022-03-05 00:04:28.000000000 +0100
++++ firefox-98.0/browser/base/content/default-bookmarks.html	2022-03-08 21:03:38.451416394 +0100
+@@ -40,6 +40,14 @@
+             <dt><a href="https://www.mozilla.org/contribute/" icon="@mozilla_icon@" data-l10n-id="default-bookmarks-firefox-community">default-bookmarks-firefox-community</a></dt>
+             <dt><a href="https://www.mozilla.org/about/" icon="@mozilla_icon@" data-l10n-id="default-bookmarks-firefox-about">default-bookmarks-firefox-about</a></dt>
+         </dl><p>
 +    <p><dt><h3>PLD Linux Distribution</h3></dt>
 +        <dl><p>
 +	    <dt><a href="http://www.pld-linux.org/" icon_uri="http://www.pld-linux.org/favicon.ico" icon="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABHUlEQVQ4jc1SwWqDQBB91pyFpsWLSGklRVHw7CnJLyTpzaMf4Dck5Feay4bc96T4BQkevCTiXc0nTA9lxbIJ2FP7YFh2Zt+bN8MCfw1lyKPmWhNjDACwWq3w9Pjc8UZDBBhj4JxjPB5j97n7UXu4RTjlR2quNYk75xwA0LYtJu8T9GsSNts1KSrIcW3aHxg115oM0yDHtUlRQcuPxX2ywGw+JUUFGaZBaZaQoqKLQQKiq3DSF0iz5L7AKT92RTFKPxzXlsjdEtMsId/3ISzqui41iONYyo2E5eViiSiKEIYhLMui8/l802VZXUjTNOR5Ds/zvhOb7ZrK6iLZ2x8YzeZTMkxDOsWSlbK60OvL26Af2R+3KAoEQfAb2n/FF3KJkR/xf7tGAAAAAElFTkSuQmCC">PLD Home Page</a>
@@ -14,5 +13,5 @@ diff -ruN firefox-52.0.orig/browser/locales/generic/profile/bookmarks.html.in fi
 +            <dt><a href="http://planet.pld-linux.org/" icon_uri="http://www.pld-linux.org/favicon.ico" icon="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABHUlEQVQ4jc1SwWqDQBB91pyFpsWLSGklRVHw7CnJLyTpzaMf4Dck5Feay4bc96T4BQkevCTiXc0nTA9lxbIJ2FP7YFh2Zt+bN8MCfw1lyKPmWhNjDACwWq3w9Pjc8UZDBBhj4JxjPB5j97n7UXu4RTjlR2quNYk75xwA0LYtJu8T9GsSNts1KSrIcW3aHxg115oM0yDHtUlRQcuPxX2ywGw+JUUFGaZBaZaQoqKLQQKiq3DSF0iz5L7AKT92RTFKPxzXlsjdEtMsId/3ISzqui41iONYyo2E5eViiSiKEIYhLMui8/l802VZXUjTNOR5Ds/zvhOb7ZrK6iLZ2x8YzeZTMkxDOsWSlbK60OvL26Af2R+3KAoEQfAb2n/FF3KJkR/xf7tGAAAAAElFTkSuQmCC">Planet PLD</a>
 +        </dl>
  #else
-         <dl>
-             <p><dt><a href="https://www.mozilla.org/@AB_CD@/contribute/" icon="@mozilla_icon@">@firefox_community@</a>
+         <dl><p>
+             <dt><a href="https://www.mozilla.org/contribute/" icon="@mozilla_icon@" data-l10n-id="default-bookmarks-firefox-community">default-bookmarks-firefox-community</a></dt>
