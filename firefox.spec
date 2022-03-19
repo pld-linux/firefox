@@ -256,6 +256,7 @@ Source196:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i6
 # Source196-md5:	0674470c285b40b996b5e9709c2fb36d
 Source197:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/zh-TW.xpi
 # Source197-md5:	310073d803781ea1deb4a49b01dd0ad5
+Patch0:		aarch64-hang.patch
 Patch4:		%{name}-prefs.patch
 Patch5:		%{name}-pld-bookmarks.patch
 Patch6:		%{name}-no-subshell.patch
@@ -2116,6 +2117,7 @@ unpack() {
 %define __unzip unpack
 %setup -q %(seq -f '-a %g' 100 197 | xargs)
 
+%patch0 -p1
 %patch4 -p1
 %patch5 -p1
 %patch6 -p2
