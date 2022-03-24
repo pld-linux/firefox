@@ -51,7 +51,7 @@ Summary(hu.UTF-8):	Firefox web böngésző
 Summary(pl.UTF-8):	Firefox - przeglądarka WWW
 Name:		firefox
 Version:	98.0.2
-Release:	1
+Release:	2
 License:	MPL v2.0
 Group:		X11/Applications/Networking
 Source0:	https://releases.mozilla.org/pub/firefox/releases/%{version}/source/firefox-%{version}.source.tar.xz
@@ -348,6 +348,8 @@ BuildRequires:	unzip
 BuildRequires:	zip
 BuildRequires:	zlib-devel >= 1.2.3
 BuildConflicts:	%{name}-devel < %{version}
+BuildConflicts:	python3-psutil < 5.4.2
+BuildConflicts:	python3-psutil > 5.8.0
 Requires(post):	mktemp >= 1.5-18
 Requires:	browser-plugins >= 2.0
 %{?with_system_cairo:Requires:	cairo >= 1.10.2-5}
