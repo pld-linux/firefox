@@ -10,5 +10,5 @@
 -
 +    return '/usr/bin/virtualenv-3'
  
- def _system_python_env_variable_present():
-     return any(
+ def _resolve_installed_packages(python_executable):
+     pip_json = subprocess.check_output(
