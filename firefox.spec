@@ -321,7 +321,7 @@ BuildRequires:	python3-simplejson
 BuildRequires:	python3-virtualenv >= 20
 BuildRequires:	rpm-build >= 4.6
 BuildRequires:	rpmbuild(macros) >= 1.601
-BuildRequires:	rust >= 1.57.0
+BuildRequires:	rust >= 1.59.0
 BuildRequires:	rust-cbindgen >= 0.23.0
 BuildRequires:	sed >= 4.0
 BuildRequires:	tar >= 1:1.22
