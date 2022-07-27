@@ -573,9 +573,11 @@ Summary(pl.UTF-8):	Bengalskie pliki językowe dla Firefoksa (wersja dla Banglade
 Group:		I18n
 Requires:	firefox >= %{version}
 Provides:	firefox-lang-resources = %{version}
-Obsoletes:	firefox-lang-bn_IN
+Obsoletes:	firefox-lang-bn_IN < 68
 Obsoletes:	iceweasel-lang-bn < 45
+Obsoletes:	iceweasel-lang-bn_IN < 45
 Obsoletes:	mozilla-firefox-lang-bn < 38
+Obsoletes:	mozilla-firefox-lang-bn_IN < 38
 BuildArch:	noarch
 
 %description lang-bn
