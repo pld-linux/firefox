@@ -2230,7 +2230,7 @@ ac_add_options --with-system-zlib
 ac_add_options --without-wasm-sandboxed-libraries
 EOF
 
-%if ! %{with clang}
+%if %{without clang}
 # On x86_64 architectures, Mozilla can build up to 4 jobs at once in parallel,
 # however builds tend to fail on other arches when building in parallel.
 MOZ_PARALLEL_BUILD=1
@@ -2253,10 +2253,15 @@ D=$(( RANDOM % (200 - 100 + 1 ) + 5 ))
 XVFB_PID=$!
 [ -n "$XVFB_PID" ] || exit 1
 export DISPLAY=:${D}
-MOZ_PGO=1 AUTOCONF=/usr/bin/autoconf2_13 MACH_USE_SYSTEM_PYTHON=1 ./mach build
+MOZ_PGO=1 \
+AUTOCONF=/usr/bin/autoconf2_13 \
+MACH_BUILD_PYTHON_NATIVE_PACKAGE_SOURCE=none \
+./mach build
 kill $XVFB_PID
 %else
-AUTOCONF=/usr/bin/autoconf2_13 MACH_USE_SYSTEM_PYTHON=1 ./mach build
+AUTOCONF=/usr/bin/autoconf2_13 \
+MACH_BUILD_PYTHON_NATIVE_PACKAGE_SOURCE=none \
+./mach build
 %endif
 
 %install
