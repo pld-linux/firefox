@@ -264,8 +264,6 @@ Patch8:		%{name}-system-virtualenv.patch
 Patch9:		%{name}-Disable-Firefox-Health-Report.patch
 Patch10:	system-cairo.patch
 Patch11:	glibc-double.patch
-# Test if it can be removed when updating package
-Patch12:	glibc-2.34.patch
 URL:		https://www.mozilla.org/firefox/
 BuildRequires:	OpenGL-devel
 BuildRequires:	alsa-lib-devel
@@ -2128,7 +2126,6 @@ unpack() {
 %patch9 -p1
 %{?with_system_cairo:%patch10 -p1}
 %patch11 -p1
-%patch12 -p1
 
 %if %{with pgo}
 %{__sed} -i -e 's@__BROWSER_PATH__@"../../dist/bin/firefox-bin"@' build/automation.py.in
