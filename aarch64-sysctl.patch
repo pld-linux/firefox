@@ -1,0 +1,11 @@
+--- firefox-106.0/media/ffvpx/config_unix_aarch64.h.orig	2022-10-10 18:05:25.000000000 +0200
++++ firefox-106.0/media/ffvpx/config_unix_aarch64.h	2022-10-18 20:18:40.655546208 +0200
+@@ -329,7 +329,7 @@
+ #define HAVE_SLEEP 0
+ #define HAVE_STRERROR_R 1
+ #define HAVE_SYSCONF 1
+-#define HAVE_SYSCTL 1
++#define HAVE_SYSCTL 0
+ #define HAVE_USLEEP 1
+ #define HAVE_UTGETOSTYPEFROMSTRING 0
+ #define HAVE_VIRTUALALLOC 0
