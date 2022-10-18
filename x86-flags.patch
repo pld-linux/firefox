@@ -1,0 +1,13 @@
+--- firefox-106.0/third_party/libwebrtc/modules/audio_processing/aec3/aec3_gn/moz.build.orig	2022-10-10 18:05:26.000000000 +0200
++++ firefox-106.0/third_party/libwebrtc/modules/audio_processing/aec3/aec3_gn/moz.build	2022-10-18 20:28:44.724270714 +0200
+@@ -258,6 +258,10 @@
+ 
+ if CONFIG["CPU_ARCH"] == "x86" and CONFIG["OS_TARGET"] == "Linux":
+ 
++    CXXFLAGS += [
++        "-msse2"
++    ]
++
+     DEFINES["WEBRTC_ENABLE_AVX2"] = True
+     DEFINES["_GNU_SOURCE"] = True
+ 
