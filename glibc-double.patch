@@ -8,14 +8,13 @@
  
  #include "mozilla/EndianUtils.h"
  
-@@ -30,10 +31,8 @@
+@@ -30,9 +31,8 @@
   * Adapted from https://github.com/freebsd/freebsd-src/search?q=__double_t
   */
  
 -typedef double      __double_t;
 -typedef __double_t  double_t;
 -typedef float       __float_t;
--typedef __float_t   float_t;
 +typedef double_t  __double_t;
 +typedef float_t  __float_t;
  
