@@ -11,7 +11,7 @@
  
 @@ -140,7 +140,7 @@
  // should no longer be used directly. Instead, getAppUpdateAutoEnabled and
- // getAppUpdateAutoEnabled from UpdateUtils.jsm should be used.
+ // getAppUpdateAutoEnabled from UpdateUtils.sys.mjs should be used.
  #ifndef XP_WIN
 -  pref("app.update.auto", true);
 +  pref("app.update.auto", false);
