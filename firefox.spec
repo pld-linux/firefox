@@ -51,7 +51,7 @@ Summary(hu.UTF-8):	Firefox web böngésző
 Summary(pl.UTF-8):	Firefox - przeglądarka WWW
 Name:		firefox
 Version:	108.0
-Release:	2
+Release:	3
 License:	MPL v2.0
 Group:		X11/Applications/Networking
 Source0:	https://releases.mozilla.org/pub/firefox/releases/%{version}/source/firefox-%{version}.source.tar.xz
@@ -257,6 +257,7 @@ Source196:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i6
 Source197:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/zh-TW.xpi
 # Source197-md5:	b56141fdca72715f6abbf895037dd64a
 Patch0:		x86-flags.patch
+Patch1:		uniffi.patch
 Patch4:		%{name}-prefs.patch
 Patch5:		%{name}-pld-bookmarks.patch
 Patch6:		%{name}-no-subshell.patch
@@ -2119,6 +2120,7 @@ unpack() {
 %setup -q %(seq -f '-a %g' 100 197 | xargs)
 
 %patch0 -p1
+%patch1 -p1
 %patch4 -p1
 %patch5 -p1
 %patch6 -p2
