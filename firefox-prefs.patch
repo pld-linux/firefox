@@ -37,7 +37,7 @@
  // Use PlacesUIUtils.defaultParentGuid to read this; do NOT read the pref
  // directly.
 @@ -646,7 +648,7 @@
- pref("mousewheel.with_control.action",3);
+ 
  pref("mousewheel.with_win.action", 1);
  
 -pref("browser.xul.error_pages.expert_bad_cert", false);
