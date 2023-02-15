@@ -1,7 +1,7 @@
 --- firefox-98.0/browser/base/content/default-bookmarks.html.orig	2022-03-05 00:04:28.000000000 +0100
 +++ firefox-98.0/browser/base/content/default-bookmarks.html	2022-03-08 21:03:38.451416394 +0100
 @@ -40,6 +40,14 @@
-             <dt><a href="https://www.mozilla.org/contribute/" icon="@mozilla_icon@" data-l10n-id="default-bookmarks-firefox-community">default-bookmarks-firefox-community</a></dt>
+ #endif
              <dt><a href="https://www.mozilla.org/about/" icon="@mozilla_icon@" data-l10n-id="default-bookmarks-firefox-about">default-bookmarks-firefox-about</a></dt>
          </dl><p>
 +    <p><dt><h3>PLD Linux Distribution</h3></dt>
@@ -14,4 +14,4 @@
 +        </dl>
  #else
          <dl><p>
-             <dt><a href="https://www.mozilla.org/contribute/" icon="@mozilla_icon@" data-l10n-id="default-bookmarks-firefox-community">default-bookmarks-firefox-community</a></dt>
+             <dt><a href="https://www.mozilla.org/contribute/?utm_medium=firefox-desktop&utm_source=bookmarks-toolbar&utm_campaign=new-users-nightly&utm_content=-global" icon="@mozilla_icon@" data-l10n-id="default-bookmarks-firefox-community">default-bookmarks-firefox-community</a></dt>
