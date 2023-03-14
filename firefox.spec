@@ -256,6 +256,7 @@ Source196:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i6
 # Source196-md5:	23f05f0557b237d110a4c532aaa22e2a
 Source197:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/zh-TW.xpi
 # Source197-md5:	3b7f687bb6473a99e8cb997f2acb6bad
+Patch0:		xsimd.patch
 Patch4:		%{name}-prefs.patch
 Patch5:		%{name}-pld-bookmarks.patch
 Patch6:		%{name}-no-subshell.patch
@@ -2118,6 +2119,7 @@ unpack() {
 %define __unzip unpack
 %setup -q %(seq -f '-a %g' 100 197 | xargs)
 
+%patch0 -p1
 %patch4 -p1
 %patch5 -p1
 %patch6 -p2
