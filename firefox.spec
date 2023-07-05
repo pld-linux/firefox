@@ -19,6 +19,7 @@
 %bcond_without	system_libvpx	# build with system libvpx
 %bcond_without	clang		# build using Clang/LLVM
 %bcond_with	lowmem		# lower memory requirements
+%bcond_with	lowmem2		# even lower memory requirements at cost of build time
 %bcond_with	rust_simd	# enable SIMD in Rust code
 
 %if %{with lto}
@@ -2211,6 +2212,7 @@ export MOZ_DEBUG_FLAGS=" "
 export LLVM_USE_SPLIT_DWARF=1
 export LLVM_PARALLEL_LINK_JOBS=1
 export MOZ_LINK_FLAGS="-Wl,--no-keep-memory -Wl,--reduce-memory-overheads"
+#export CARGO_INCREMENTAL=0  # candidate for with_lowmem2
 export RUSTFLAGS="-Cdebuginfo=0"
 %endif
 
@@ -2242,6 +2244,8 @@ ac_add_options --disable-tests
 %endif
 ac_add_options --disable-crashreporter
 ac_add_options --disable-necko-wifi
+# candidate for with_lowmem2
+#ac_add_options --disable-unified-build
 ac_add_options --disable-updater
 ac_add_options --enable-alsa
 ac_add_options --enable-chrome-format=omni
@@ -2308,7 +2312,7 @@ kill $XVFB_PID
 %else
 AUTOCONF=/usr/bin/autoconf2_13 \
 MACH_BUILD_PYTHON_NATIVE_PACKAGE_SOURCE=none \
-./mach build
+./mach build %{?with_lowmem2:-j1}
 %endif
 
 %install
