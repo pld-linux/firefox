@@ -31,6 +31,10 @@
 %define		with_lowmem	1
 %endif
 
+%ifarch %{arm} aarch64 riscv64
+%define		with_v4l2	1
+%endif
+
 # On updating version, grab CVE links from:
 # https://www.mozilla.org/security/known-vulnerabilities/firefox.html
 # Release Notes:
@@ -52,7 +56,7 @@ Summary(hu.UTF-8):	Firefox web böngésző
 Summary(pl.UTF-8):	Firefox - przeglądarka WWW
 Name:		firefox
 Version:	116.0
-Release:	1
+Release:	2
 License:	MPL v2.0
 Group:		X11/Applications/Networking
 Source0:	https://releases.mozilla.org/pub/firefox/releases/%{version}/source/firefox-%{version}.source.tar.xz
@@ -2418,7 +2422,7 @@ fi
 %attr(755,root,root) %{_libdir}/%{name}/firefox-bin
 %attr(755,root,root) %{_libdir}/%{name}/glxtest
 %attr(755,root,root) %{_libdir}/%{name}/pingsender
-%attr(755,root,root) %{_libdir}/%{name}/v4l2test
+%{?with_v4l2:%attr(755,root,root) %{_libdir}/%{name}/v4l2test}
 %attr(755,root,root) %{_libdir}/%{name}/vaapitest
 %{_libdir}/%{name}/application.ini
 %{_libdir}/%{name}/browser/omni.ja
