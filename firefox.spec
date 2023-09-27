@@ -291,7 +291,9 @@ BuildRequires:	freetype-devel >= 1:2.2.1
 BuildRequires:	glib2-devel >= 1:2.42
 %{?with_gps:BuildRequires:	gpsd-devel >= 3.11}
 BuildRequires:	gtk+3-devel >= 3.14.0
+%ifnarch %arch_with_atomics64
 BuildRequires:	libatomic-devel
+%endif
 # DECnet (dnprogs.spec), not dummy net (libdnet.spec)
 #BuildRequires:	libdnet-devel
 BuildRequires:	libevent-devel >= 1.4.7
@@ -330,7 +332,7 @@ BuildRequires:	python3-modules >= 1:3.8.5-3
 BuildRequires:	python3-simplejson
 BuildRequires:	python3-virtualenv >= 20
 BuildRequires:	rpm-build >= 4.6
-BuildRequires:	rpmbuild(macros) >= 1.601
+BuildRequires:	rpmbuild(macros) >= 2.025
 BuildRequires:	rust >= 1.66.0
 BuildRequires:	rust-cbindgen >= 0.24.3
 BuildRequires:	sed >= 4.0
