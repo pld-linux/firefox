@@ -269,6 +269,7 @@ Source200:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i6
 # Source200-md5:	1ac78a3012bae2f9d6bd1d0b13a3c4ed
 Source201:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/zh-TW.xpi
 # Source201-md5:	924385f8d9e548adaf817a6549dd1643
+Patch0:		xsimd-unsupported-arch.patch
 Patch4:		%{name}-prefs.patch
 Patch5:		%{name}-pld-bookmarks.patch
 Patch6:		%{name}-no-subshell.patch
@@ -2191,6 +2192,7 @@ unpack() {
 %define __unzip unpack
 %setup -q %(seq -f '-a %g' 100 201 | xargs)
 
+%patch0 -p1 -d third_party/xsimd
 %patch4 -p1
 %patch5 -p1
 %patch6 -p2
