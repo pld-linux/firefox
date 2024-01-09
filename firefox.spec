@@ -601,22 +601,6 @@ Bengali (Bangladesh) resources for Firefox.
 %description lang-bn -l pl.UTF-8
 Bengalskie pliki językowe dla Firefoksa (wersja dla Bangladeszu).
 
-%package lang-bn_IN
-Summary:	Bengali (India) resources for Firefox
-Summary(pl.UTF-8):	Bengalskie pliki językowe dla Firefoksa (wersja dla Indii)
-Group:		I18n
-Requires:	firefox >= %{version}
-Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-bn_IN < 45
-Obsoletes:	mozilla-firefox-lang-bn_IN < 38
-BuildArch:	noarch
-
-%description lang-bn_IN
-Bengali (India) resources for Firefox.
-
-%description lang-bn_IN -l pl.UTF-8
-Bengalskie pliki językowe dla Firefoksa (wersja dla Indii).
-
 %package lang-br
 Summary:	Breton resources for Firefox
 Summary(pl.UTF-8):	Bretońskie pliki językowe dla Firefoksa
