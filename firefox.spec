@@ -703,22 +703,6 @@ Czech resources for Firefox.
 %description lang-cs -l pl.UTF-8
 Czeskie pliki językowe dla Firefoksa.
 
-%package lang-csb
-Summary:	Kashubian resources for Firefox
-Summary(pl.UTF-8):	Kaszubskie pliki językowe dla Firefoksa
-Group:		I18n
-Requires:	firefox >= %{version}
-Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-csb < 45
-Obsoletes:	mozilla-firefox-lang-csb < 38
-BuildArch:	noarch
-
-%description lang-csb
-Kashubian resources for Firefox.
-
-%description lang-csb -l pl.UTF-8
-Kaszubskie pliki językowe dla Firefoksa.
-
 %package lang-cy
 Summary:	Welsh resources for Firefox
 Summary(pl.UTF-8):	Walijskie pliki językowe dla Firefoksa
@@ -1435,22 +1419,6 @@ Korean resources for Firefox.
 %description lang-ko -l pl.UTF-8
 Koreańskie pliki językowe dla Firefoksa.
 
-%package lang-ku
-Summary:	Kurdish resources for Firefox
-Summary(pl.UTF-8):	Kurdyjskie pliki językowe dla Firefoksa
-Group:		I18n
-Requires:	firefox >= %{version}
-Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-ku < 45
-Obsoletes:	mozilla-firefox-lang-ku < 38
-BuildArch:	noarch
-
-%description lang-ku
-Kurdish resources for Firefox.
-
-%description lang-ku -l pl.UTF-8
-Kurdyjskie pliki językowe dla Firefoksa.
-
 %package lang-lij
 Summary:	Ligurian resources for Firefox
 Summary(pl.UTF-8):	Liguryjskie pliki językowe dla Firefoksa
@@ -2134,22 +2102,6 @@ Traditional Chinese resources for Firefox.
 %description lang-zh_TW -l pl.UTF-8
 Chińskie tradycyjne pliki językowe dla Firefoksa.
 
-%package lang-zu
-Summary:	Zulu resources for Firefox
-Summary(pl.UTF-8):	Zuluskie pliki językowe dla Firefoksa
-Group:		I18n
-Requires:	firefox >= %{version}
-Provides:	firefox-lang-resources = %{version}
-Obsoletes:	iceweasel-lang-zu < 45
-Obsoletes:	mozilla-firefox-lang-zu < 38
-BuildArch:	noarch
-
-%description lang-zu
-Zulu resources for Firefox.
-
-%description lang-zu -l pl.UTF-8
-Zuluskie pliki językowe dla Firefoksa.
-
 %package geckodriver
 Summary:	WebDriver for Firefox
 Summary(pl.UTF-8):	WebDriver dla Firefoksa
@@ -2526,10 +2478,6 @@ fi
 %defattr(644,root,root,755)
 %{_datadir}/%{name}/browser/extensions/langpack-cs@firefox.mozilla.org.xpi
 
-#%files lang-csb
-#%defattr(644,root,root,755)
-#%{_datadir}/%{name}/browser/extensions/langpack-csb@firefox.mozilla.org.xpi
-
 %files lang-cy
 %defattr(644,root,root,755)
 %{_datadir}/%{name}/browser/extensions/langpack-cy@firefox.mozilla.org.xpi
@@ -2701,10 +2649,6 @@ fi
 %files lang-ko
 %defattr(644,root,root,755)
 %{_datadir}/%{name}/browser/extensions/langpack-ko@firefox.mozilla.org.xpi
-
-#%files lang-ku
-#%defattr(644,root,root,755)
-#%{_datadir}/%{name}/browser/extensions/langpack-ku@firefox.mozilla.org.xpi
 
 %files lang-lij
 %defattr(644,root,root,755)
@@ -2881,10 +2825,6 @@ fi
 %files lang-zh_TW
 %defattr(644,root,root,755)
 %{_datadir}/%{name}/browser/extensions/langpack-zh-TW@firefox.mozilla.org.xpi
-
-#%files lang-zu
-#%defattr(644,root,root,755)
-#%{_datadir}/%{name}/browser/extensions/langpack-zu@firefox.mozilla.org.xpi
 
 %if %{with geckodriver}
 %files geckodriver
