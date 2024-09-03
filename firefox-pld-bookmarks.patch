@@ -13,5 +13,5 @@
 +            <dt><a href="http://planet.pld-linux.org/" icon_uri="http://www.pld-linux.org/favicon.ico" icon="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABHUlEQVQ4jc1SwWqDQBB91pyFpsWLSGklRVHw7CnJLyTpzaMf4Dck5Feay4bc96T4BQkevCTiXc0nTA9lxbIJ2FP7YFh2Zt+bN8MCfw1lyKPmWhNjDACwWq3w9Pjc8UZDBBhj4JxjPB5j97n7UXu4RTjlR2quNYk75xwA0LYtJu8T9GsSNts1KSrIcW3aHxg115oM0yDHtUlRQcuPxX2ywGw+JUUFGaZBaZaQoqKLQQKiq3DSF0iz5L7AKT92RTFKPxzXlsjdEtMsId/3ISzqui41iONYyo2E5eViiSiKEIYhLMui8/l802VZXUjTNOR5Ds/zvhOb7ZrK6iLZ2x8YzeZTMkxDOsWSlbK60OvL26Af2R+3KAoEQfAb2n/FF3KJkR/xf7tGAAAAAElFTkSuQmCC">Planet PLD</a>
 +        </dl>
  #else
+     <dt><h3 data-l10n-id="default-bookmarks-nightly-heading">default-bookmarks-nightly-heading</h3></dt>
          <dl><p>
-             <dt><a href="https://www.mozilla.org/contribute/?utm_medium=firefox-desktop&utm_source=bookmarks-toolbar&utm_campaign=new-users-nightly&utm_content=-global" icon="@mozilla_icon@" data-l10n-id="default-bookmarks-firefox-community">default-bookmarks-firefox-community</a></dt>
