@@ -2133,12 +2133,14 @@ m.in. nawigowanie po stronach WWW, wejście od użytkownika, wykonywanie
 JavaScriptu.
 
 %prep
-unpack() {
-	local args="$1" file="$2"
-	cp -p $file .
-}
-%define __unzip unpack
-%setup -q %(seq -f '-a %g' 100 202 | xargs)
+%setup -q
+for s in %sources; do
+	case $s in
+	*.xpi)
+		cp -p $s .
+		;;
+	esac
+done
 
 %patch4 -p1
 %patch5 -p1
