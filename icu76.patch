@@ -1,0 +1,11 @@
+--- firefox-134.0.1/js/moz.configure.orig	2025-01-13 14:45:49.000000000 +0100
++++ firefox-134.0.1/js/moz.configure	2025-01-19 18:59:17.113153887 +0100
+@@ -1253,7 +1253,7 @@
+     return enable_system_icu
+ 
+ 
+-system_icu = pkg_check_modules("MOZ_ICU", "icu-i18n >= 73.1", when="--with-system-icu")
++system_icu = pkg_check_modules("MOZ_ICU", "icu-i18n >= 76.1 icu-uc >= 76.1", when="--with-system-icu")
+ 
+ 
+ @depends(enable_system_icu_option)

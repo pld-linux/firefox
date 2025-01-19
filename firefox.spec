@@ -270,6 +270,7 @@ Source201:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i6
 # Source201-md5:	68d29d17b8004c0c0cd0c52e76f7c3e9
 Source202:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/zh-TW.xpi
 # Source202-md5:	6c8e817ace24765e8faf2dda91bb2cf0
+Patch0:		icu76.patch
 Patch4:		%{name}-prefs.patch
 Patch5:		%{name}-pld-bookmarks.patch
 Patch7:		%{name}-middle_click_paste.patch
@@ -2142,12 +2143,13 @@ for s in %sources; do
 	esac
 done
 
-%patch4 -p1
-%patch5 -p1
-%patch7 -p1
-%patch9 -p1
-%{?with_system_cairo:%patch10 -p1}
-%patch11 -p1
+%patch -P0 -p1
+%patch -P4 -p1
+%patch -P5 -p1
+%patch -P7 -p1
+%patch -P9 -p1
+%{?with_system_cairo:%patch -P10 -p1}
+%patch -P11 -p1
 
 %if %{with pgo}
 %{__sed} -i -e 's@__BROWSER_PATH__@"../../dist/bin/firefox-bin"@' build/automation.py.in
