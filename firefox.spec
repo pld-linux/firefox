@@ -54,222 +54,222 @@ Summary:	Firefox web browser
 Summary(hu.UTF-8):	Firefox web böngésző
 Summary(pl.UTF-8):	Firefox - przeglądarka WWW
 Name:		firefox
-Version:	135.0
+Version:	135.0.1
 Release:	1
 License:	MPL v2.0
 Group:		X11/Applications/Networking
 Source0:	https://releases.mozilla.org/pub/firefox/releases/%{version}/source/firefox-%{version}.source.tar.xz
-# Source0-md5:	c6abbc2482f59ec74211fe52255f7a9c
+# Source0-md5:	3b28b702245af8ede5be1587205ee967
 Source3:	%{name}.desktop
 Source4:	%{name}.sh
 Source5:	vendor.js
 Source6:	vendor-ac.js
 Source100:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/ach.xpi
-# Source100-md5:	f9e601114291cd63a4a04b2745eecaa5
+# Source100-md5:	fd61a5822d3ba4500e5772ef40ccf901
 Source101:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/af.xpi
-# Source101-md5:	8ddbb79b418a65ca4ea3381926ae5774
+# Source101-md5:	ad22aa39f382b5c6b0e6eb315d027f5a
 Source102:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/an.xpi
-# Source102-md5:	97631cc6e5a01a4b3acea74cc10a249d
+# Source102-md5:	99af736b4da55f5a0d9380f8b730aab2
 Source103:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/ar.xpi
-# Source103-md5:	defdca72b4eb6aa954b5b26408c2f8cd
+# Source103-md5:	796a8b48a3d739f941ab8bf190119748
 Source104:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/ast.xpi
-# Source104-md5:	4ccda6113ed8d0d50cf8ae1b1b0e92a3
+# Source104-md5:	fbb83f091101dd6e54b774f73d0b62ac
 Source105:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/az.xpi
-# Source105-md5:	68ba7b2df115a157ea8d2d1a2e99992f
+# Source105-md5:	5e5e42ad62d795cf90e7c57e74bf5882
 Source106:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/be.xpi
-# Source106-md5:	de8dcaa7f91cfc3af567a521d97ca287
+# Source106-md5:	b53aa55c45699690589bad4711b6e45e
 Source107:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/bg.xpi
-# Source107-md5:	d8c884071d51613f2852eca68aea312e
+# Source107-md5:	6952496bdaf34ed470d557bacb8fa580
 Source108:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/bn.xpi
-# Source108-md5:	08b52d2ae77ce2ee968979f04d85145b
+# Source108-md5:	72cd3bf401b83ab3afdf74b91aa9b2c4
 Source109:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/br.xpi
-# Source109-md5:	cccd6d14b46ca58278629fa6a2bac826
+# Source109-md5:	35a708bae11b5def3494b7e5c75ce6de
 Source110:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/bs.xpi
-# Source110-md5:	76e4a8dcce7e5aeaa31145170aa25425
+# Source110-md5:	0b07b027693a978b47f46eeebbf2b439
 Source111:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/ca.xpi
-# Source111-md5:	23973178379b47b06be54ccf0c084d23
+# Source111-md5:	2c84b9f685591c90773768fc24e5f61c
 Source112:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/ca-valencia.xpi
-# Source112-md5:	cd651cfd4ec6b3a5f632796c991b49f7
+# Source112-md5:	9d6857fc287fe5582251520c94b9dbca
 Source113:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/cak.xpi
-# Source113-md5:	a7013e1e799dc47af235cff01333eefc
+# Source113-md5:	931ebe87837b99135e97cfe1c2696efc
 Source114:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/cs.xpi
-# Source114-md5:	3e19be6019b9f4d10b469314e67e27ac
+# Source114-md5:	cf86168b81233e1b545abb5f43cb70b9
 Source115:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/cy.xpi
-# Source115-md5:	c79b1167f477471096731efb34ced2ea
+# Source115-md5:	f5010ed868492d06adb8eec82bb142a9
 Source116:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/da.xpi
-# Source116-md5:	056b5becb805e93c7c4fa51545f08e09
+# Source116-md5:	4963e6caff9b1b32fa1f9a0397ba5bcd
 Source117:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/de.xpi
-# Source117-md5:	ad3f664a403c5237794be9a13b1fea9b
+# Source117-md5:	9417b8084b4c746eec92614cfc55973a
 Source118:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/dsb.xpi
-# Source118-md5:	40b84396d89cb06d4ff9b03c32ad2803
+# Source118-md5:	13a90911b05dcfe89794404b1b063808
 Source119:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/el.xpi
-# Source119-md5:	3cd23bee99e95ec9c82fcecdff20bf89
+# Source119-md5:	7742761741814a500ee7905b3e479a7d
 Source120:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/en-CA.xpi
-# Source120-md5:	82fe5799b963a348beb81d0196d5f4f2
+# Source120-md5:	9bb80989fc387dc18e001bbd3496fa4a
 Source121:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/en-GB.xpi
-# Source121-md5:	8594f92cb9f727d67203696add049ac4
+# Source121-md5:	2888aad9a96fe91412432e5ca81d241b
 Source122:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/en-US.xpi
-# Source122-md5:	ae133419f0aa565ace5b35988ad67d5c
+# Source122-md5:	7680ebe43e41138d6a5e63cb36ad659f
 Source123:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/eo.xpi
-# Source123-md5:	ec1d029f3bdb23dd6e3631c98e0c3735
+# Source123-md5:	8c83929f02ed844519d7e18b4c387d3e
 Source124:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/es-AR.xpi
-# Source124-md5:	2a64e6356316c044e6761bf23be7dcb6
+# Source124-md5:	1f27171a7e4f2a879728944959ca24c9
 Source125:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/es-CL.xpi
-# Source125-md5:	42f3406ea9a6434be0e906974f1815b4
+# Source125-md5:	63da3e33e092135b6f60386e49a6322d
 Source126:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/es-ES.xpi
-# Source126-md5:	5434c998b1501cc3b0bf2d70ac277eeb
+# Source126-md5:	65091d5e732bf831974590b94cd3aec9
 Source127:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/es-MX.xpi
-# Source127-md5:	8a9cc5330d774dac900c764c175c141e
+# Source127-md5:	bc438329d0bc258ee74bae99d1795ede
 Source128:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/et.xpi
-# Source128-md5:	1a126e9dc3116b8b7dcf8d14d265742e
+# Source128-md5:	6c1008238792d07173db4a9f635ef64c
 Source129:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/eu.xpi
-# Source129-md5:	a0d6957c7c6ae4e97b3ea8bc0ef9875e
+# Source129-md5:	33fc14f1f11d01e9d9521facab450551
 Source130:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/fa.xpi
-# Source130-md5:	221c28a4df1e1c1d71c100fe72def25a
+# Source130-md5:	fcc122cb67d5de2356f74b5c47ac1c57
 Source131:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/ff.xpi
-# Source131-md5:	5d55a1534ef243237c79b0be0fb5a6da
+# Source131-md5:	c18ad388d837f488bb86048ebb0c1d1a
 Source132:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/fi.xpi
-# Source132-md5:	fe2690e396a5244c7f4c27130e4810a9
+# Source132-md5:	5ec3055aa488e78967ad0eacb7138ce7
 Source133:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/fr.xpi
-# Source133-md5:	e76f5945231fdbd7d593b5a0d8a3d5db
+# Source133-md5:	5cee346dd6d4fd2e5f184a37c8be3bf7
 Source134:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/fur.xpi
-# Source134-md5:	d960ce5bc5028cb4ff0dcf15db2c6539
+# Source134-md5:	8dac0ebae427bdcebb2967dcd3eca23e
 Source135:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/fy-NL.xpi
-# Source135-md5:	06efe911b416f0fa33b02f982d375b69
+# Source135-md5:	4136ffcc09e3cafbf67c655c0f81e494
 Source136:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/ga-IE.xpi
-# Source136-md5:	c1abb44158e06d23d20521e75f362203
+# Source136-md5:	7076b0b60ba0fe37dd7297073fd3cbd2
 Source137:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/gd.xpi
-# Source137-md5:	9a42ba6791a8d21829381fa6f5f73c8d
+# Source137-md5:	dcf4e144fb5fdbdd91b129bd3c6ce5be
 Source138:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/gl.xpi
-# Source138-md5:	990d50f11d7cf2bf0f9a21e7470e8d88
+# Source138-md5:	08da2dba675ed756eef2a3aa9f47b3fe
 Source139:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/gn.xpi
-# Source139-md5:	0899e291f1a0089620b29e94c6d9c27b
+# Source139-md5:	0cc20cafd92746333515e4c91d80c2e7
 Source140:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/gu-IN.xpi
-# Source140-md5:	07adce1d2cc196d77a09e50d138a3d36
+# Source140-md5:	6f1e8de0fe199be2742018be51c31cf0
 Source141:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/he.xpi
-# Source141-md5:	a73997f55ab94524e584d0ef9aea851b
+# Source141-md5:	5aefd60ba041a6a63835a14a4aa3ebae
 Source142:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/hi-IN.xpi
-# Source142-md5:	4bec013e4f60e5566978ba6b2818371c
+# Source142-md5:	12cff7bfda87de7db1a382443676eb42
 Source143:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/hr.xpi
-# Source143-md5:	a53b878abe90f49c5935d9e17263d502
+# Source143-md5:	31ddd71d30ca823dc06fa8352453549e
 Source144:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/hsb.xpi
-# Source144-md5:	d890c74e73ba258907fe16d0ca000a46
+# Source144-md5:	61114de92ec501b0cbb5e5fdca87ed3c
 Source145:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/hu.xpi
-# Source145-md5:	15957479f00169966afad8cbec2b4849
+# Source145-md5:	13d9706ddd79ad79bc4195c970c36936
 Source146:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/hy-AM.xpi
-# Source146-md5:	2ddac72109d1d7ac8222435155a8cda9
+# Source146-md5:	84ec480c770b630b0eb1776f2e4443ff
 Source147:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/ia.xpi
-# Source147-md5:	860c68a0e60497185f4fd3c1d417c5d7
+# Source147-md5:	8965aaaba1d7b1ca3ba6cbf34238fd73
 Source148:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/id.xpi
-# Source148-md5:	8c176a3f3c3793dacdb3984aca788347
+# Source148-md5:	79ae946fafac591181f21d4b12e7a020
 Source149:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/is.xpi
-# Source149-md5:	24b6c134c096048e1bc75da596793110
+# Source149-md5:	8c789aabd2cea9fbb34225cdadba40e1
 Source150:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/it.xpi
-# Source150-md5:	69a58a4c5d91027b1c5b26cd28f315c7
+# Source150-md5:	cc3a3bc130ec0a5cfe3b7edcfb46c3cd
 Source151:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/ja.xpi
-# Source151-md5:	dadb09bcf45e29741b4710fd1d2f118c
+# Source151-md5:	119ebbf6f3e67c475deb4c9d600e24a0
 Source152:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/ka.xpi
-# Source152-md5:	52f432299d9637809a66c823684fd482
+# Source152-md5:	1617fe9f44acb2d9c61598900e5e405c
 Source153:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/kab.xpi
-# Source153-md5:	bee42501205d9f6cf281ed257f288be4
+# Source153-md5:	dd243419283729069342bec99df17568
 Source154:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/kk.xpi
-# Source154-md5:	0691a2be73e96cc6afc6e89ed86b4ffd
+# Source154-md5:	912de62fa4074e97373fbe7e26c83774
 Source155:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/km.xpi
-# Source155-md5:	a2eb333ae60d1d0a204f2fefad31adf2
+# Source155-md5:	aa8d632ed602d1981bf145700de88804
 Source156:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/kn.xpi
-# Source156-md5:	6e26f04a2364ce0d6a87deb95929c121
+# Source156-md5:	399e1646e4a63df4acb89fa020fb6128
 Source157:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/ko.xpi
-# Source157-md5:	b4e255bf90b6da63e373420bfa28e0cf
+# Source157-md5:	08d30faba7580202921f42547a759109
 Source158:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/lij.xpi
-# Source158-md5:	eacdb76224a6821d7cadf71b2dde770d
+# Source158-md5:	03a4c62d917ddd08d4bda61751bb21bf
 Source159:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/lt.xpi
-# Source159-md5:	ce736a1212adaa6b8b200f9fbd05130d
+# Source159-md5:	0394c53b694aabcd48d0388704df6a3c
 Source160:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/lv.xpi
-# Source160-md5:	0746e74238e6693ab00dd995ee382287
+# Source160-md5:	eb56bb271f4d3e2593c93281f57520ce
 Source161:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/mk.xpi
-# Source161-md5:	4a737ac1f4ee2b094c20825137023470
+# Source161-md5:	c8f57a200f1d8af27bab882177ec49a5
 Source162:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/mr.xpi
-# Source162-md5:	129552b55db48e46a7a8389f72a56243
+# Source162-md5:	9ad35246bb0378e85427edd9ab0d0c5f
 Source163:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/ms.xpi
-# Source163-md5:	710fd46018b2478c54c22f7db71a666e
+# Source163-md5:	641a88d431e3ce43e6a49d73d6caa6b7
 Source164:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/my.xpi
-# Source164-md5:	e2345cad322d796a6bacc22eb0d476c2
+# Source164-md5:	20e5e6e3a4d068f80c9d931a737486bf
 Source165:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/nb-NO.xpi
-# Source165-md5:	a5c9b35c823089bdf03716e4b15c61ee
+# Source165-md5:	aa15ecfcce8f18e2ae1c8b0a3c925fad
 Source166:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/ne-NP.xpi
-# Source166-md5:	64018825865a1933eb2b4166031ed92e
+# Source166-md5:	109c59977b15d9b6b27c98dbf97b0ce5
 Source167:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/nl.xpi
-# Source167-md5:	5031c6afee43f8856c62d16a2bf0c021
+# Source167-md5:	90a762eb122b7781023533dd8d6a3b72
 Source168:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/nn-NO.xpi
-# Source168-md5:	7653977238b3459b4fa8433dc86b1bd3
+# Source168-md5:	746c4ce4a066b79e793c83d739fb4f77
 Source169:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/oc.xpi
-# Source169-md5:	0b700d8ddf9b7892c0cf4088af185e39
+# Source169-md5:	3746f674b8bf92e765f087745b482714
 Source170:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/pa-IN.xpi
-# Source170-md5:	972be4aa4ba896ef5613eb4f8beb2ee6
+# Source170-md5:	b2360d0912b701724125b193fa47b3ca
 Source171:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/pl.xpi
-# Source171-md5:	cd15b62a1b8e8d70c9794b64673b5846
+# Source171-md5:	13edc429e21bba617b7f205f4db13d43
 Source172:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/pt-BR.xpi
-# Source172-md5:	3bc9ddfaa52bb9c21885be88564230b8
+# Source172-md5:	e02c64a89554568aedac047b66b0f63a
 Source173:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/pt-PT.xpi
-# Source173-md5:	abef7fbe436a390865ec74290115c41d
+# Source173-md5:	08273db27cec8fd07dc7101c049f6741
 Source174:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/rm.xpi
-# Source174-md5:	d6d5f16e44ef5f9dcb19e140e4971164
+# Source174-md5:	e0e190f299cd3921df552cd2c01c9f76
 Source175:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/ro.xpi
-# Source175-md5:	81dd72c00e75451a8aa573499784755d
+# Source175-md5:	044c6cae0d4ac6b173b956b6e1c54628
 Source176:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/ru.xpi
-# Source176-md5:	42f36196f97646d9b0727359511c7fcc
+# Source176-md5:	c4de458d7eec514ed690e5dc1e76795d
 Source177:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/sat.xpi
-# Source177-md5:	a8de14d0979decef3aadae7fbc1d1a84
+# Source177-md5:	120f8f0aa5bf494907363f3a339538fd
 Source178:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/sc.xpi
-# Source178-md5:	acb116580bb33bc55b42d6ef37bde5bf
+# Source178-md5:	5e7cfb70a5086655cb289fcabcc0bf52
 Source179:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/sco.xpi
-# Source179-md5:	ec903f2e23d7be2f94bb09e99da27c23
+# Source179-md5:	d0f24070fa7d867bbf1e33779c208982
 Source180:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/si.xpi
-# Source180-md5:	a6edd383e52b74a95115fe08b76960da
+# Source180-md5:	04e10e0644fa80f825fc66fd11409d14
 Source181:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/sk.xpi
-# Source181-md5:	167e95d71d119ca49729e654bc920e46
+# Source181-md5:	d9e7415c383ff0e6e704e54258045eb8
 Source182:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/skr.xpi
-# Source182-md5:	0533aef52f279365f264f82b763967ba
+# Source182-md5:	f11f124c43feddfd6e3750996fdbe184
 Source183:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/sl.xpi
-# Source183-md5:	9b47add0f4f99562dc3e45e3318acc7d
+# Source183-md5:	f8e2d26e7e2e80628051096705ee75a6
 Source184:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/son.xpi
-# Source184-md5:	2e13e1ffe5f415e1099c5e8d9d13594e
+# Source184-md5:	a00fae24232f9cdc76f6ad5900dedda4
 Source185:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/sq.xpi
-# Source185-md5:	17e9e869181a545c27ad740cd4e43380
+# Source185-md5:	90347695829ef8d25a5c01f7c19e26a9
 Source186:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/sr.xpi
-# Source186-md5:	116890c8866c2b40de21de0c3502d114
+# Source186-md5:	347fcc12fea4484ba0f6e24aa9bdcda4
 Source187:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/sv-SE.xpi
-# Source187-md5:	789d38000f5c7aa8fa5ebc694b7354da
+# Source187-md5:	1f2d412991414753219be6e070806795
 Source188:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/szl.xpi
-# Source188-md5:	110a7d6dc8368a99f8f69551a49615c8
+# Source188-md5:	1be33457e9a21f123c36e5c5333e5480
 Source189:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/ta.xpi
-# Source189-md5:	563c584f4fc28c134e90a505d5ab35bf
+# Source189-md5:	cb86c3a4c1885e5dded3517fa5687f32
 Source190:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/te.xpi
-# Source190-md5:	661ae3bf542e1b363c38829f41f2633a
+# Source190-md5:	688aaae99c0a7dbee5b2d629f968c043
 Source191:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/tg.xpi
-# Source191-md5:	6f3dfd65dd8401bed10566132f227e41
+# Source191-md5:	7460e9661061a845dd67995caa4e0de2
 Source192:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/th.xpi
-# Source192-md5:	bc6ad1b37c4bd0a0ec80840ea9101216
+# Source192-md5:	f45e97ed98ff0280170d0e61873a3e8c
 Source193:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/tl.xpi
-# Source193-md5:	a070ecd29b7f409bc18df4107fbe80fd
+# Source193-md5:	69882a8a046d0391efd6493d4ed80ae1
 Source194:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/tr.xpi
-# Source194-md5:	74db3a8e458e9428eea69b122f63b1a4
+# Source194-md5:	f8b176c4e8f8bdd0187139ab75271f58
 Source195:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/trs.xpi
-# Source195-md5:	adbd7dccbc2d79fcba90b97935324719
+# Source195-md5:	2f926a59cd176ee62985af81aa327dcc
 Source196:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/uk.xpi
-# Source196-md5:	069ec69abc16423d813b404a4e6295c0
+# Source196-md5:	6afbf3565b3315cce2affa5f7e67db9a
 Source197:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/ur.xpi
-# Source197-md5:	557ea4cec7dcf3a1521420f296973a87
+# Source197-md5:	48cf9b79cf58cd712f94e63dae156f8b
 Source198:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/uz.xpi
-# Source198-md5:	606936fc0df1880bbc3ebbab52334050
+# Source198-md5:	faca4537639d8065b4857a1ab2f19b8f
 Source199:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/vi.xpi
-# Source199-md5:	719ec41579aadf49de6d2d4381d63552
+# Source199-md5:	d61716a8f390ba203b16437d8fb4893c
 Source200:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/xh.xpi
-# Source200-md5:	e6965bc31a71ccd12aca47949d5c2ff9
+# Source200-md5:	a943ce0fed96222d339b82d1a8077c71
 Source201:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/zh-CN.xpi
-# Source201-md5:	39a9b524702c84139808eda8351fc73a
+# Source201-md5:	f8cc4b594a0c729a0cc0fb4f59141d49
 Source202:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/zh-TW.xpi
-# Source202-md5:	113cc1c42281ad67154d42f7bc77a00a
+# Source202-md5:	ae1fd7ac53c887998577a7a5eab084f6
 Patch0:		icu76.patch
 Patch4:		%{name}-prefs.patch
 Patch5:		%{name}-pld-bookmarks.patch
