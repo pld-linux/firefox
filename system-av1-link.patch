@@ -1,0 +1,24 @@
+--- firefox-136.0/config/external/gkcodecs/moz.build.orig	2025-02-27 19:17:33.000000000 +0100
++++ firefox-136.0/config/external/gkcodecs/moz.build	2025-03-05 00:38:33.786059902 +0100
+@@ -16,3 +16,5 @@
+ SYMBOLS_FILE = "gkcodecs.symbols"
+ if CONFIG["MOZ_SYSTEM_LIBVPX"]:
+     DEFINES["MOZ_SYSTEM_LIBVPX"] = True
++if CONFIG["MOZ_SYSTEM_AV1"]:
++    DEFINES["MOZ_SYSTEM_AV1"] = True
+--- firefox-136.0/config/external/gkcodecs/gkcodecs.symbols.orig	2025-02-27 19:17:33.000000000 +0100
++++ firefox-136.0/config/external/gkcodecs/gkcodecs.symbols	2025-03-05 00:40:05.126570775 +0100
+@@ -1,4 +1,5 @@
+ # libaom symbols
++#ifndef MOZ_SYSTEM_AV1
+ aom_codec_av1_cx
+ aom_codec_av1_dx
+ aom_codec_build_config
+@@ -51,6 +52,7 @@
+ av1_set_internal_size
+ av1_set_reference_enc
+ av1_use_as_reference
++#endif
+ # libogg symbols
+ ogg_calloc_func
+ ogg_free_func
