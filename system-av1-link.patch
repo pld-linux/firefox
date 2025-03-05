@@ -22,3 +22,14 @@
  # libogg symbols
  ogg_calloc_func
  ogg_free_func
+--- firefox-136.0/media/ffvpx/libavcodec/moz.build.orig	2025-02-27 19:17:41.000000000 +0100
++++ firefox-136.0/media/ffvpx/libavcodec/moz.build	2025-03-05 18:57:12.946441934 +0100
+@@ -121,6 +121,8 @@
+     ]
+ 
+     if CONFIG["MOZ_SYSTEM_AV1"]:
++        CFLAGS += CONFIG['MOZ_SYSTEM_LIBAOM_CFLAGS']
++        OS_LIBS += CONFIG['MOZ_SYSTEM_LIBAOM_LIBS']
+         CFLAGS += CONFIG['MOZ_SYSTEM_LIBDAV1D_CFLAGS']
+         OS_LIBS += CONFIG['MOZ_SYSTEM_LIBDAV1D_LIBS']
+     else:
