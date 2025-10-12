@@ -340,7 +340,7 @@ BuildRequires:	python3-setuptools
 BuildRequires:	python3-simplejson
 BuildRequires:	python3-virtualenv >= 20
 BuildRequires:	rpm-build >= 4.6
-BuildRequires:	rpmbuild(macros) >= 2.025
+BuildRequires:	rpmbuild(macros) >= 2.050
 BuildRequires:	rust >= 1.82.0
 BuildRequires:	rust-cbindgen >= 0.27.0
 BuildRequires:	sed >= 4.0
@@ -370,6 +370,7 @@ BuildConflicts:	%{name}-devel < %{version}
 BuildConflicts:	python3-psutil < 5.4.2
 BuildConflicts:	python3-psutil > 5.8.0
 Requires(post):	mktemp >= 1.5-18
+%{?rust_req}
 Requires:	aom >= 3.0.0
 Requires:	browser-plugins >= 2.0
 %{?with_system_cairo:Requires:	cairo >= 1.10.2-5}
@@ -2128,6 +2129,7 @@ Summary:	WebDriver for Firefox
 Summary(pl.UTF-8):	WebDriver dla Firefoksa
 Group:		Applications
 Requires:	firefox >= %{version}
+%{?rust_req}
 
 %description geckodriver
 WebDriver is an open source tool for automated testing of webapps
