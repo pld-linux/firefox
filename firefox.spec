@@ -34,6 +34,22 @@
 %define		with_v4l2	1
 %endif
 
+%if %{with clang}
+%define		clang_ver	%(rpm -q --qf='%%{V}' clang 2> /dev/null || echo ERROR)
+%endif
+
+%ifarch %{ix86}
+%if %{with clang}
+%if %{_ver_ge %{clang_ver} 20}
+%define		x86_simd	sse2
+%else
+%define		x86_simd	mmx
+%endif
+%else
+%define		x86_simd	mmx
+%endif
+%endif
+
 # On updating version, grab CVE links from:
 # https://www.mozilla.org/security/known-vulnerabilities/firefox.html
 # Release Notes:
@@ -55,7 +71,7 @@ Summary(hu.UTF-8):	Firefox web böngésző
 Summary(pl.UTF-8):	Firefox - przeglądarka WWW
 Name:		firefox
 Version:	144.0
-Release:	1
+Release:	2
 License:	MPL v2.0
 Group:		X11/Applications/Networking
 Source0:	https://releases.mozilla.org/pub/firefox/releases/%{version}/source/firefox-%{version}.source.tar.xz
@@ -395,7 +411,7 @@ Requires:	pixman >= 0.36.0
 Requires:	xorg-lib-libXrandr >= 1.4.0
 Requires:	xorg-lib-libxkbcommon >= 0.4.1
 %ifarch %{ix86}
-Requires:	cpuinfo(mmx)
+Requires:	cpuinfo(%{x86_simd})
 %endif
 Provides:	xulrunner-libs = 2:%{version}-%{release}
 Provides:	wwwbrowser
@@ -2182,8 +2198,8 @@ export CC="%{__cc}"
 export CXX="%{__cxx}"
 %endif
 %ifarch %{ix86}
-export CFLAGS="%{rpmcflags} %{!?with_system_libvpx:-mmmx} -D_FILE_OFFSET_BITS=64"
-export CXXFLAGS="%{rpmcxxflags} -mmmx -D_FILE_OFFSET_BITS=64"
+export CFLAGS="%{rpmcflags} %{!?with_system_libvpx:-m%{x86_simd}} -D_FILE_OFFSET_BITS=64"
+export CXXFLAGS="%{rpmcxxflags} -m%{x86_simd} -D_FILE_OFFSET_BITS=64"
 %else
 export CFLAGS="%{rpmcflags} -D_FILE_OFFSET_BITS=64"
 export CXXFLAGS="%{rpmcxxflags} -D_FILE_OFFSET_BITS=64"
