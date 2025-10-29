@@ -286,6 +286,7 @@ Source201:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i6
 # Source201-md5:	6c9594e1fd7de4643abc334251b1e4a1
 Source202:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-i686/xpi/zh-TW.xpi
 # Source202-md5:	f53b4ee371c16e99d3e6c64b34da0c17
+Patch0:		custom-rust-lto.patch
 Patch1:		system-av1-link.patch
 Patch4:		%{name}-prefs.patch
 Patch5:		%{name}-pld-bookmarks.patch
@@ -2168,6 +2169,7 @@ for s in %sources; do
 	esac
 done
 
+%patch -P0 -p1
 %patch -P1 -p1
 %patch -P4 -p1
 %patch -P5 -p1
@@ -2293,6 +2295,14 @@ jobs="%{__jobs}"
 export MOZ_PARALLEL_BUILD
 %else
 %{?__jobs:export MOZ_PARALLEL_BUILD="%__jobs"}
+%endif
+
+%if %{with lowmem}
+export RUST_LTO="thin"
+%endif
+
+%if %{with lowmem2}
+export RUST_LTO="none"
 %endif
 
 export MOZ_SERVICES_SYNC="1"

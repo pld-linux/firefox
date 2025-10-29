@@ -1,0 +1,11 @@
+--- thunderbird-144.0/config/makefiles/rust.mk.orig	2025-10-10 21:53:14.000000000 +0200
++++ thunderbird-144.0/config/makefiles/rust.mk	2025-10-19 02:21:26.649027973 +0200
+@@ -101,7 +101,7 @@
+ # Never enable when coverage is enabled to work around https://github.com/rust-lang/rust/issues/90045.
+ ifndef MOZ_CODE_COVERAGE
+ ifeq (,$(findstring gkrust_gtest,$(RUST_LIBRARY_FILE)))
+-cargo_rustc_flags += -Clto$(if $(filter full,$(MOZ_LTO_RUST_CROSS)),=fat)
++cargo_rustc_flags += -Clto$(if $(RUST_LTO),=$(RUST_LTO),$(if $(filter full,$(MOZ_LTO_RUST_CROSS)),=fat))
+ endif
+ # We need -Cembed-bitcode=yes for all crates when using -Clto.
+ RUSTFLAGS += -Cembed-bitcode=yes
