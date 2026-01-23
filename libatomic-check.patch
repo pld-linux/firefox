@@ -1,0 +1,13 @@
+--- firefox-147.0/build/moz.configure/libraries.configure.orig	2026-01-06 01:36:39.000000000 +0100
++++ firefox-147.0/build/moz.configure/libraries.configure	2026-01-23 21:28:44.930382796 +0100
+@@ -124,8 +124,8 @@
+     def check_std_atomic_requirements(flag=None, when=None):
+         return try_link(
+             includes=["cstdint", "atomic"],
+-            body="std::atomic<uint64_t> foo; foo = 1;",
+-            flags=flag or [],
++            body="std::atomic<uint64_t> foo; foo = 1; std::atomic<double> bar; bar = 1;",
++            flags=["-std=gnu++20"] + (flag or []),
+             when=when,
+         )
+ 

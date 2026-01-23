@@ -288,6 +288,8 @@ Source202:	https://releases.mozilla.org/pub/firefox/releases/%{version}/linux-x8
 # Source202-md5:	92ea63a0dea2340fb4af788bf996da24
 Patch0:		custom-rust-lto.patch
 Patch1:		system-av1-link.patch
+# https://github.com/llvm/llvm-project/issues/177701
+Patch2:		libatomic-check.patch
 Patch4:		%{name}-prefs.patch
 Patch5:		%{name}-pld-bookmarks.patch
 Patch7:		%{name}-middle_click_paste.patch
@@ -314,6 +316,9 @@ BuildRequires:	freetype-devel >= 1:2.2.1
 BuildRequires:	glib2-devel >= 1:2.42
 BuildRequires:	gtk+3-devel >= 3.14.0
 %ifnarch %arch_with_atomics64
+BuildRequires:	libatomic-devel
+%endif
+%ifarch %{ix86}
 BuildRequires:	libatomic-devel
 %endif
 BuildRequires:	libdrm-devel
@@ -2172,6 +2177,7 @@ done
 
 %patch -P0 -p1
 %patch -P1 -p1
+%patch -P2 -p1
 %patch -P4 -p1
 %patch -P5 -p1
 %patch -P7 -p1
