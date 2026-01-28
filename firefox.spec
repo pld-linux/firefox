@@ -290,6 +290,7 @@ Patch0:		custom-rust-lto.patch
 Patch1:		system-av1-link.patch
 # https://github.com/llvm/llvm-project/issues/177701
 Patch2:		libatomic-check.patch
+Patch3:		glibc2.43.patch
 Patch4:		%{name}-prefs.patch
 Patch5:		%{name}-pld-bookmarks.patch
 Patch7:		%{name}-middle_click_paste.patch
@@ -363,7 +364,7 @@ BuildRequires:	python3-setuptools
 BuildRequires:	python3-simplejson
 BuildRequires:	python3-virtualenv >= 20
 BuildRequires:	rpm-build >= 4.6
-BuildRequires:	rpmbuild(macros) >= 2.050
+BuildRequires:	rpmbuild(macros) >= 2.051
 BuildRequires:	rust >= 1.82.0
 BuildRequires:	rust-cbindgen >= 0.29.1
 BuildRequires:	sed >= 4.0
@@ -2178,12 +2179,15 @@ done
 %patch -P0 -p1
 %patch -P1 -p1
 %patch -P2 -p1
+%patch -P3 -p1
 %patch -P4 -p1
 %patch -P5 -p1
 %patch -P7 -p1
 %patch -P9 -p1
 %{?with_system_cairo:%patch -P10 -p1}
 %patch -P11 -p1
+
+%update_cargo_checksum third_party/rust/glslopt/glsl-optimizer/include/c11/threads.h
 
 %if %{with pgo}
 %{__sed} -i -e 's@__BROWSER_PATH__@"../../dist/bin/firefox-bin"@' build/automation.py.in
