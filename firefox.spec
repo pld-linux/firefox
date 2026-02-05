@@ -440,6 +440,7 @@ Obsoletes:	xulrunner < 2:42
 Obsoletes:	xulrunner-gnome < 2:42
 Obsoletes:	xulrunner-libs < 2:42
 Conflicts:	firefox-lang-resources < %{version}
+ExcludeArch:	x32
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		filterout_cpp		-D_FORTIFY_SOURCE=[0-9]+
