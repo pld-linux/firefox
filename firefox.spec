@@ -71,7 +71,7 @@ Summary(hu.UTF-8):	Firefox web böngésző
 Summary(pl.UTF-8):	Firefox - przeglądarka WWW
 Name:		firefox
 Version:	152.0
-Release:	1
+Release:	2
 License:	MPL v2.0
 Group:		X11/Applications/Networking
 Source0:	https://releases.mozilla.org/pub/firefox/releases/%{version}/source/firefox-%{version}.source.tar.xz
@@ -296,6 +296,8 @@ Patch5:		%{name}-pld-bookmarks.patch
 Patch7:		%{name}-middle_click_paste.patch
 Patch9:		%{name}-Disable-Firefox-Health-Report.patch
 Patch10:	system-cairo.patch
+Patch11:	types.patch
+Patch12:	includes.patch
 URL:		https://www.mozilla.org/firefox/
 BuildRequires:	Mesa-libgbm-devel
 BuildRequires:	OpenGL-devel
@@ -2186,6 +2188,8 @@ done
 %patch -P7 -p1
 %patch -P9 -p1
 %{?with_system_cairo:%patch -P10 -p1}
+%patch -P11 -p1
+%patch -P12 -p1
 
 %update_cargo_checksum third_party/rust/glslopt/glsl-optimizer/include/c11/threads.h
 
