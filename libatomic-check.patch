@@ -4,9 +4,9 @@
      def check_std_atomic_requirements(flag=None, when=None):
          return try_link(
              includes=["cstdint", "atomic"],
--            body="std::atomic<uint64_t> foo; foo = 1;",
+-            body="std::atomic<double> foo; foo = 1;",
 -            flags=flag or [],
-+            body="std::atomic<uint64_t> foo; foo = 1; std::atomic<double> bar; bar = 1;",
++            body="std::atomic<double> foo; foo = 1;",
 +            flags=["-std=gnu++20"] + (flag or []),
              when=when,
          )
