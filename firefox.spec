@@ -2451,6 +2451,7 @@ fi
 %attr(755,root,root) %{_libdir}/%{name}/v4l2test
 %endif
 %attr(755,root,root) %{_libdir}/%{name}/vaapitest
+%attr(755,root,root) %{_libdir}/%{name}/vulkantest
 %{_libdir}/%{name}/application.ini
 %{_libdir}/%{name}/browser/omni.ja
 
