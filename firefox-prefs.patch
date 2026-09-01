@@ -44,4 +44,4 @@
 +pref("browser.xul.error_pages.expert_bad_cert", true);
  pref("browser.xul.error_pages.show_safe_browsing_details_on_load", false);
  
- // Enable captive portal detection.
+ // Enable the one-click search call-to-action on the online dnsNotFound error

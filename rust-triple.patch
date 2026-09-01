@@ -1,0 +1,11 @@
+--- firefox-155.0/build/moz.configure/rust.configure.orig	2026-08-26 23:11:38.000000000 +0200
++++ firefox-155.0/build/moz.configure/rust.configure	2026-09-01 19:51:38.892130913 +0200
+@@ -300,7 +300,7 @@
+ 
+         # config.guess uses the "pc" vendor for x86/x86_64 where rust uses its
+         # generic "unknown" vendor; normalize so we correlate on the right one.
+-        vendor = "unknown" if host_or_target.vendor == "pc" else host_or_target.vendor
++        vendor = "unknown"
+ 
+         # We have multiple candidates. There are two cases where we can try to
+         # narrow further down using extra information from the build system.
