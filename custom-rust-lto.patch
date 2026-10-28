@@ -1,11 +1,21 @@
---- firefox-158.0/config/makefiles/rust.mk.orig	2026-10-08 04:23:59.000000000 +0200
-+++ firefox-158.0/config/makefiles/rust.mk	2026-10-14 00:47:27.925592348 +0200
-@@ -56,7 +56,7 @@
- cargo_rustc_flags = $(CARGO_RUSTCFLAGS)
- # Enable link-time optimization for release builds.
- ifdef RUST_LIBRARY_LTO
--cargo_rustc_flags += -Clto
-+cargo_rustc_flags += -Clto$(if $(RUST_LTO),=$(RUST_LTO),)
- endif
+--- firefox-159.0/python/mozbuild/mozbuild/rust_commands.py.orig	2026-10-22 19:49:16.000000000 +0200
++++ firefox-159.0/python/mozbuild/mozbuild/rust_commands.py	2026-10-28 00:51:23.291347286 +0100
+@@ -4,6 +4,8 @@
  
- ifdef CARGO_INCREMENTAL
+ """Compose Cargo commands and environments for Rust build edges."""
+ 
++import os
++
+ from dataclasses import asdict, dataclass, fields
+ 
+ from mozshellutil import quote as shell_quote
+@@ -418,7 +420,8 @@
+         flags += substs.get("MOZ_RUST_LIBRARY_RUSTCFLAGS")
+ 
+     if applies_library_lto(cmd.kind, cmd.lto, substs):
+-        flags.append("-Clto")
++        mode = os.getenv("RUST_LTO")
++        flags.append(f"-Clto{f'={mode}' if mode else ''}")
+ 
+     flags += invocation.cargo_rustcflags
+ 
